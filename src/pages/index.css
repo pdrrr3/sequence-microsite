@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Euclid Circular B;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../assets/Euclid.otf") format("opentype");
+  font-display: swap;
+}
+
+h1 {
+  font-family: Euclid Circular B;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #342abc;
+}
+
+p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 145%;
+  text-align: center;
+  color: #58567a;
+  mix-blend-mode: normal;
+}
+
+.button {
+  display: inline-block;
+  background-color: #342abc;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 100px;
+}
