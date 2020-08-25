@@ -1,42 +1,70 @@
 import React from "react"
+import { Content } from "./Content"
+
 export const FeaturesTwo = () => (
   <div>
-    <div>
-      <h2>Take what you need when you need it We’re flexible</h2>
-      <p>
+    <Content
+      className="max-w-4xl my-10 text-center"
+      heading="Take what you need when you need it\nWe’re flexible"
+    >
+      No matter where you’re at in your development journey, we’re here to help.
+      Sequence is open source and customizable. We use Sequence ourselves, and
+      we understand that every product has different needs.
+    </Content>
+
+    <div className="mx-auto max-w-6xl">
+      <LineItem heading="Intuitive User Experience">
         No matter where you’re at in your development journey, we’re here to
         help. Sequence is open source and customizable. We use Sequence
         ourselves, and we understand that every product has different needs.
-      </p>
+      </LineItem>
+
+      <LineItem heading="Intuitive Developer Experience">
+        With Sequence, integrating the Ethereum blockchain with your product
+        only takes a few lines of code, seamlessly providing your users with
+        powerful protocols like decentralized exchanges and access to the next
+        generation of the Internet.
+      </LineItem>
+
+      <LineItem heading="Robust + Secure">
+        Your users can recover their account and activate advanced security
+        features like cryptographic Two-Factor Authentication, ensuring high
+        security while maintaining full custody over their funds. Built on top
+        of Ethereum, the world’s most secure and robust blockchain.
+      </LineItem>
     </div>
 
-    <div>
-      <div>
-        <h3>Intuitive User Experience</h3>
-        <p>
-          No matter where you’re at in your development journey, we’re here to
-          help. Sequence is open source and customizable. We use Sequence
-          ourselves, and we understand that every product has different needs.
+    <div className="flex max-w-6xl mx-auto">
+      <div className="flex-1 flex flex-col align-center justify-center mr-10">
+        <h2>Friendly for your users</h2>
+        <h2>Easy for you</h2>
+
+        <p className="mt-4">
+          A fast and simple item creation tool. A friendly smart wallet for
+          users to securely store and manage their items. Invisible fees and
+          high transaction throughput.
+          <br />
+          <br />
+          All making it easy for your users to buy, sell and trade with one
+          another. And, good news for you: everything can be implemented with
+          only a few lines of code
         </p>
       </div>
+
       <div>
-        <h3>Intuitive Developer Experience</h3>
-        <p>
-          With Sequence, integrating the Ethereum blockchain with your product
-          only takes a few lines of code, seamlessly providing your users with
-          powerful protocols like decentralized exchanges and access to the next
-          generation of the Internet.
-        </p>
+        <img alt="feature" src="https://via.placeholder.com/530x500" />
       </div>
-      <div>
-        <h3>Robust + Secure</h3>
-        <p>
-          Your users can recover their account and activate advanced security
-          features like cryptographic Two-Factor Authentication, ensuring high
-          security while maintaining full custody over their funds. Built on top
-          of Ethereum, the world’s most secure and robust blockchain.
-        </p>
-      </div>
+    </div>
+  </div>
+)
+
+const LineItem = ({ heading, children }) => (
+  <div className="flex bg-offwhite rounded my-4 px-6 py-16 justify-center items-center">
+    <div className="flex-1">
+      <h3>{heading}</h3>
+    </div>
+    <div className="flex-1">
+      <p>{children}</p>
     </div>
   </div>
 )

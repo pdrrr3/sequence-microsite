@@ -1,55 +1,32 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import "./index.css"
-import { SkyweaverCallout } from "../components/SkyweaverCallout"
-import { Button } from "../components/Button"
-import { Hero } from "../components/Hero"
-import { ContactForm } from "../components/ContactForm"
-import { Content } from "../components/Content"
+import { Head } from "../components/Head"
 import { Header } from "../components/Header"
+import { Footer } from "../components/Footer"
+import { Hero } from "../components/Hero"
 import { FeaturesOne } from "../components/FeaturesOne"
+import { SkyweaverCallout } from "../components/SkyweaverCallout"
 import { FeaturesTwo } from "../components/FeaturesTwo"
+import { ContactForm } from "../components/ContactForm"
 
 export default function Home() {
   return (
     <div className="container">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Sequence</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
+      <Head />
 
       <Header />
-      <Hero />
 
-      <Content heading="Friendly for your users Easy for you">
-        A fast and simple item creation tool. A friendly smart wallet for users
-        to securely store and manage their items. Invisible fees and high
-        transaction throughput. All making it easy for your users to buy, sell
-        and trade with one another.
-      </Content>
+      <Hero />
 
       <FeaturesOne />
 
-      <div>
-        <h1>Ready to Sequence your product?</h1>
-        <Button>Contact Us</Button>
-      </div>
-
       <SkyweaverCallout />
+
       <FeaturesTwo />
 
-      <Content heading="Friendly for your users Easy for you">
-        A fast and simple item creation tool. A friendly smart wallet for users
-        to securely store and manage their items. Invisible fees and high
-        transaction throughput. All making it easy for your users to buy, sell
-        and trade with one another.
-      </Content>
-
       <ContactForm />
+
+      <Footer />
     </div>
   )
 }

@@ -10,15 +10,24 @@
   font-display: swap;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: Euclid Circular B;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
   line-height: 125%;
-  text-align: center;
   letter-spacing: -0.02em;
-  color: #342abc;
+  @apply text-blue;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 p {
@@ -27,15 +36,6 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 145%;
-  text-align: center;
-  color: #58567a;
   mix-blend-mode: normal;
-}
-
-.button {
-  display: inline-block;
-  background-color: #342abc;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 100px;
+  @apply text-gray;
 }
