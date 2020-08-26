@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "./Button"
 
 export const ContactForm = () => (
-  <div className="text-center my-20">
+  <div id="contact" className="text-center my-20">
     <div className="max-w-2xl mx-auto mb-16">
       <h2>Get in Touch</h2>
 
@@ -59,17 +59,17 @@ const TextArea = ({ name, label }) => (
   </InputBase>
 )
 
-const Select = ({ name, label, options = [] }) => (
-  <InputBase name={name} label={label}>
-    <select type="text" id={name} name={name}>
-      {options.map((o, i) => (
-        <option key={`option-${i}`} value={o}>
-          {o}
-        </option>
-      ))}
-    </select>
-  </InputBase>
-)
+// const Select = ({ name, label, options = [] }) => (
+//   <InputBase name={name} label={label}>
+//     <select type="text" id={name} name={name}>
+//       {options.map((o, i) => (
+//         <option key={`option-${i}`} value={o}>
+//           {o}
+//         </option>
+//       ))}
+//     </select>
+//   </InputBase>
+// )
 
 const InputBase = ({ name, label, children }) => (
   <div className="flex flex-col text-left mx-2 mb-6">

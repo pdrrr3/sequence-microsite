@@ -1,5 +1,4 @@
 import React from "react"
-import "./index.css"
 import { Head } from "../components/Head"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
@@ -9,6 +8,7 @@ import { FeaturesOne } from "../components/FeaturesOne"
 import { SkyweaverCallout } from "../components/SkyweaverCallout"
 import { FeaturesTwo } from "../components/FeaturesTwo"
 import { ContactForm } from "../components/ContactForm"
+import "../index.css"
 
 export default function Home() {
   return (

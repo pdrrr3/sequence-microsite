@@ -1,40 +1,42 @@
 import React from "react"
+import logoPng from "../assets/logo.png"
+
 export const Footer = () => (
   <footer>
     <div className="flex flex-1 justify-between py-20">
+      <div className="flex flex-col flex-1 items-start">
+        <img alt="logo" src={logoPng} style={{ height: 30 }} />
+        <p>Stay up to date with our latest news and announcements</p>
+      </div>
+
       <div className="flex flex-1">
-        <p>Sequence</p>
-      </div>
+        <div className="flex flex-col flex-1">
+          <FooterLink href="/#tools">Tools</FooterLink>
+          <FooterLink href="/#contact">Contact</FooterLink>
+          <FooterLink href="https://www.google.ca">Docs</FooterLink>
+        </div>
 
-      <div className="flex flex-col flex-1 justify-end">
-        <FooterLink>Tools</FooterLink>
-        <FooterLink>Developers</FooterLink>
-        <FooterLink>About</FooterLink>
-        <FooterLink>Contact</FooterLink>
-        <FooterLink>Try Wallet</FooterLink>
-      </div>
+        <div className="flex flex-col flex-1">
+          <FooterLink href="https://www.google.ca">Github</FooterLink>
+          <FooterLink href="https://www.google.ca">Twitter</FooterLink>
+        </div>
 
-      <div className="flex flex-col flex-1 justify-end">
-        <FooterLink>Tools</FooterLink>
-        <FooterLink>Developers</FooterLink>
-        <FooterLink>About</FooterLink>
-        <FooterLink>Contact</FooterLink>
-        <FooterLink>Try Wallet</FooterLink>
-      </div>
-
-      <div className="flex flex-col flex-1 justify-end">
-        <FooterLink>Tools</FooterLink>
-        <FooterLink>Developers</FooterLink>
-        <FooterLink>About</FooterLink>
-        <FooterLink>Contact</FooterLink>
-        <FooterLink>Try Wallet</FooterLink>
+        <div className="flex flex-col flex-1">
+          <FooterLink href="/privacy">Privacy</FooterLink>
+          <FooterLink href="/privacy">Terms</FooterLink>
+          <FooterLink href="/privacy">Cookies</FooterLink>
+        </div>
       </div>
     </div>
     <div className="flex flex-1 justify-between py-10">
-      <p>Copyright 2020 Sequence</p>
+      <p>Copyright © {new Date().getFullYear()} Sequence</p>
       <p>Built by Horizon</p>
     </div>
   </footer>
 )
 
-const FooterLink = ({ children }) => <p className="px-2">{children}</p>
+const FooterLink = ({ children, href = "#/" }) => (
+  <a href={href} className="px-2 py-2">
+    {children}
+  </a>
+)
