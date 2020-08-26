@@ -4,7 +4,7 @@ module.exports = {
     colors: {
       blue: "#342abc",
       white: "#ffffff",
-      offwhite: "#eeeeee",
+      offwhite: "#efefef",
       gray: "#58567a",
     },
     container: {

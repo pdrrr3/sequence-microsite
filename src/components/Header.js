@@ -1,18 +1,25 @@
 import React from "react"
+import { Button } from "./Button"
+import logoPng from "../assets/logo.png"
+
 export const Header = () => (
-  <header className="flex flex-1 justify-between py-6">
-    <div className="flex flex-1">
-      <p>Sequence</p>
+  <header className="flex flex-1 justify-between py-6 max-w-6xl mx-auto">
+    <div className="flex items-center">
+      <img alt="logo" src={logoPng} style={{ height: 30 }} />
     </div>
 
-    <div className="flex flex-1 justify-end">
+    <div className="flex flex-1 justify-end items-center">
       <HeaderLink>Tools</HeaderLink>
-      <HeaderLink>Developers</HeaderLink>
-      <HeaderLink>About</HeaderLink>
       <HeaderLink>Contact</HeaderLink>
-      <HeaderLink>Try Wallet</HeaderLink>
+      <Button gradientFill small className="ml-4">
+        Try Wallet
+      </Button>
     </div>
   </header>
 )
 
-const HeaderLink = ({ children }) => <p className="px-2">{children}</p>
+const HeaderLink = ({ children, href = "/#" }) => (
+  <a href={href} className="px-5 text-blue">
+    {children}
+  </a>
+)

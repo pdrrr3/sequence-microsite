@@ -1,15 +1,19 @@
 import React from "react"
 import { Content } from "./Content"
+import featurePng from "../assets/feature.png"
+import bulletPng from "../assets/bullet.png"
 
 export const FeaturesTwo = () => (
   <div>
     <Content
-      className="max-w-4xl my-10 text-center"
+      className="max-w-4xl my-32 text-center"
       heading="Take what you need when you need it\nWe’re flexible"
     >
-      No matter where you’re at in your development journey, we’re here to help.
-      Sequence is open source and customizable. We use Sequence ourselves, and
-      we understand that every product has different needs.
+      <span className="max-w-xl mx-auto">
+        No matter where you’re at in your development journey, we’re here to
+        help. Sequence is open source and customizable. We use Sequence
+        ourselves, and we understand that every product has different needs.
+      </span>
     </Content>
 
     <div className="mx-auto max-w-6xl">
@@ -34,7 +38,7 @@ export const FeaturesTwo = () => (
       </LineItem>
     </div>
 
-    <div className="flex max-w-6xl mx-auto">
+    <div className="flex max-w-6xl mx-auto my-32">
       <div className="flex-1 flex flex-col align-center justify-center mr-10">
         <h2>Friendly for your users</h2>
         <h2>Easy for you</h2>
@@ -52,7 +56,7 @@ export const FeaturesTwo = () => (
       </div>
 
       <div>
-        <img alt="feature" src="https://via.placeholder.com/530x500" />
+        <img alt="features" src={featurePng} width={530} />
       </div>
     </div>
   </div>
@@ -60,7 +64,10 @@ export const FeaturesTwo = () => (
 
 const LineItem = ({ heading, children }) => (
   <div className="flex bg-offwhite rounded my-4 px-6 py-16 justify-center items-center">
-    <div className="flex-1">
+    <div className="flex-1 flex items-center">
+      <div className="mr-4" style={{ width: 42 }}>
+        <img alt="bullet" src={bulletPng} />
+      </div>
       <h3>{heading}</h3>
     </div>
     <div className="flex-1">
