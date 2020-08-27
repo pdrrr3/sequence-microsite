@@ -4,6 +4,14 @@
 
 @font-face {
   font-family: Euclid Circular B;
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/Euclid-regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Euclid Circular B;
   font-weight: 500;
   font-style: normal;
   src: url("./assets/Euclid.otf") format("opentype");
@@ -22,13 +30,13 @@ h4 {
   @apply text-blue;
 }
 
-p {
+p,
+.button {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   line-height: 145%;
   mix-blend-mode: normal;
-  @apply text-gray;
 }
 
 h1 {
@@ -36,7 +44,7 @@ h1 {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 h3 {
@@ -48,7 +56,22 @@ h4 {
 }
 
 p {
-  font-size: 16px;
+  @apply text-gray;
+  font-size: 23px;
+}
+
+.button {
+  font-size: 20px;
+}
+
+.label {
+  font-size: 23px;
+}
+
+@media (min-width: 480px) {
+  .xs-flex-row {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 640px) {
@@ -71,6 +94,14 @@ p {
   p {
     font-size: 16px;
   }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
 }
 
 .label {
@@ -78,34 +109,23 @@ p {
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
   line-height: 140%;
 }
 
 .input {
-  border: 1.5px solid #342abc;
+  border: 1.5px solid #aaaae3;
   box-sizing: border-box;
   border-radius: 15px;
-  min-height: 48px;
+  min-height: 52px;
   outline: none;
   padding: 0 20px;
 }
 
 .textarea {
-  border: 1.5px solid #342abc;
+  border: 1.5px solid #aaaae3;
   box-sizing: border-box;
   border-radius: 15px;
   min-height: 200px;
   outline: none;
   padding: 10px 20px;
-}
-
-.select {
-  border: 1.5px solid #342abc;
-  box-sizing: border-box;
-  border-radius: 15px;
-  min-height: 48px;
-  outline: none;
-  padding: 10px 20px;
-  padding-right: 50px;
 }

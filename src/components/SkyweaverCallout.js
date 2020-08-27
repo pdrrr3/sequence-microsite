@@ -4,13 +4,13 @@ import skyweaverPng from "../assets/skyweaver.png"
 import skyweaverBGPng from "../assets/skyweaverbg.png"
 
 export const SkyweaverCallout = () => (
-  <div className="relative text-white text-center pt-20 pb-32 my-20">
+  <div className="relative text-white my-20 pt-4 pb-6 md:pt-20 md:pb-32 md:text-center">
     <SkyweaverBackground />
 
     <div className="mx-auto max-w-xl flex flex-col items-center py-12">
       <img alt="skyweaver" src={skyweaverPng} width={300} />
       <h3 className="text-white mt-4 mb-10">Powered by Sequence</h3>
-      <p className="text-white">
+      <p className="text-white px-10">
         The digital card game where players actually own, trade and sell their
         cards. By ranking highly on the competitive leaderboard, players win
         tradable items. With a built-in wallet and marketplace, players can
@@ -43,7 +43,7 @@ const SkyweaverBackground = () => (
       }}
     />
     <img
-      className="object-cover object-center w-full h-full relative"
+      className="object-cover object-left md:object-center w-full h-full relative"
       alt="skyweaverbg"
       src={skyweaverBGPng}
       style={{

@@ -3,10 +3,10 @@ import { Button } from "./Button"
 import logoPng from "../assets/logo.png"
 
 export const Header = () => (
-  <header className="flex flex-1 justify-between py-6 max-w-6xl mx-auto pl-6 pr-2">
-    <div className="flex flex-1 items-center justify-center sm:justify-start">
+  <header className="flex flex-1 justify-between mt-16 sm:mt-0 py-6 max-w-6xl mx-auto px-4">
+    <div className="flex flex-1 items-center justify-center sm:justify-start sm:ml-4">
       <a href="/">
-        <img alt="logo" src={logoPng} style={{ height: 30 }} />
+        <img alt="logo" src={logoPng} style={{ height: 42 }} />
       </a>
     </div>
 

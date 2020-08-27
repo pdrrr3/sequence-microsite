@@ -5,9 +5,9 @@ import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 
 export const FeaturesOne = () => (
-  <div className="px-8">
+  <div className="px-12">
     <Content
-      className="text-center"
+      className="md:text-center"
       heading="Friendly for your users\nEasy for you"
     >
       A fast and simple item creation tool. A friendly smart wallet for users to
@@ -42,7 +42,7 @@ export const FeaturesOne = () => (
     </div>
 
     <div className="mx-auto max-w-2xl flex flex-col my-40 text-center">
-      <h2>Ready to Sequence your product?</h2>
+      <h2 className="px-4">Ready to Sequence your product?</h2>
       <Button gradientBorder className="mx-auto mt-8">
         Contact Us
       </Button>

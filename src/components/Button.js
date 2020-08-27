@@ -11,7 +11,7 @@ export const Button = ({
 }) => {
   return (
     <Component
-      className={`inline-block rounded-full bg-blue text-center relative ${className} ${
+      className={`button inline-block rounded-full bg-blue text-center relative ${className} ${
         gradientBorder
           ? "text-blue"
           : className.match(/text-/)
@@ -19,7 +19,8 @@ export const Button = ({
           : "text-white"
       } ${small ? "px-2 py-2" : "px-2 py-4"}`}
       style={{
-        minWidth: small ? 120 : 150,
+        minWidth: small ? 120 : 200,
+        maxWidth: 300,
         background: gradientFill
           ? "linear-gradient(85.44deg, #AD64B9 0%, #6664B9 43.75%, #64B9AA 82.81%, #98E18C 100%)"
           : gradientBorder

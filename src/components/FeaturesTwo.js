@@ -4,9 +4,9 @@ import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 
 export const FeaturesTwo = () => (
-  <div id="tools" className="px-8">
+  <div id="tools" className="px-12">
     <Content
-      className="max-w-4xl my-32 text-center"
+      className="max-w-4xl my-32 md:text-center"
       heading="Take what you need when you need it\nWe’re flexible"
     >
       <span className="max-w-xl mx-auto">
@@ -62,12 +62,12 @@ export const FeaturesTwo = () => (
 )
 
 const LineItem = ({ heading, children }) => (
-  <div className="flex flex-col md:flex-row bg-offwhite rounded my-4 px-6 py-16 justify-center items-center">
-    <div className="flex-1 flex items-center">
-      <div className="mr-4" style={{ width: 42 }}>
+  <div className="flex flex-col md:flex-row bg-offwhite rounded my-4 px-6 py-16 justify-center md:items-center">
+    <div className="flex-1 flex items-center mb-4 md:mb-0">
+      <div className="mr-2 md:mr-4 relative" style={{ left: -5, width: 42 }}>
         <img alt="bullet" src={bulletPng} />
       </div>
-      <h3>{heading}</h3>
+      <h3 style={{ lineHeight: 1 }}>{heading}</h3>
     </div>
     <div className="flex-1">
       <p>{children}</p>
