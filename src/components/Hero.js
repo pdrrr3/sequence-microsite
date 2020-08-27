@@ -3,16 +3,16 @@ import { Button } from "./Button"
 import techLogosPng from "../assets/tech-logos.png"
 
 export const Hero = () => (
-  <div>
+  <div className="px-8">
     <div className="mx-auto max-w-xl flex flex-col justify-center text-center my-32">
-      <h1>An open stack for Blockchain development on the web</h1>
+      <h1>An open stack for Blockchain development</h1>
 
       <p className="mx-auto max-w-sm my-10">
         <span className="font-bold">Sequence</span> lets you integrate
         blockchain with your product in two minutes
       </p>
 
-      <div className="flex px-12">
+      <div className="flex">
         <Button gradientFill className="flex-1 mx-2">
           Try Wallet
         </Button>
@@ -23,7 +23,7 @@ export const Hero = () => (
     </div>
 
     <div
-      className="bg-blue max-w-3xl px-32 py-20 my-64 mx-auto text-center items-center justify-center"
+      className="bg-blue max-w-3xl px-4 py-12 md:px-32 md:py-20 my-64 mx-auto text-center items-center justify-center"
       style={{
         background:
           "linear-gradient(222.39deg, rgba(171, 66, 148, 0) 68.93%, #AB4294 115.85%), linear-gradient(61.57deg, rgba(101, 154, 176, 0) 19.77%, #56C6CD 85.93%), #514AB2",

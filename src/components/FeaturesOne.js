@@ -5,7 +5,7 @@ import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 
 export const FeaturesOne = () => (
-  <div>
+  <div className="px-8">
     <Content
       className="text-center"
       heading="Friendly for your users\nEasy for you"
@@ -15,10 +15,12 @@ export const FeaturesOne = () => (
       throughput. All making it easy for your users to buy, sell and trade with
       one another.
     </Content>
-    <div className="flex my-20 max-w-5xl mx-auto">
+
+    <div className="flex flex-col lg:flex-row items-center my-20 max-w-5xl mx-auto">
       <div className="flex-1 flex items-center">
         <img alt="features" src={featurePng} width={530} />
       </div>
+
       <div>
         <LineItem heading="Fire and Forget transactions">
           Our tools execute your users’ transactions for you. We processes these

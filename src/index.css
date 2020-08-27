@@ -17,14 +17,26 @@ h4 {
   font-family: Euclid Circular B;
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
   line-height: 125%;
   letter-spacing: -0.02em;
   @apply text-blue;
 }
 
-h2 {
+p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 145%;
+  mix-blend-mode: normal;
+  @apply text-gray;
+}
+
+h1 {
   font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
 }
 
 h3 {
@@ -36,13 +48,29 @@ h4 {
 }
 
 p {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
-  line-height: 145%;
-  mix-blend-mode: normal;
-  @apply text-gray;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
 
 .label {

@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "./Button"
 
 export const ContactForm = () => (
-  <div id="contact" className="text-center my-20">
+  <div id="contact" className="text-center my-20 px-8">
     <div className="max-w-2xl mx-auto mb-16">
       <h2>Get in Touch</h2>
 
@@ -22,15 +22,9 @@ export const ContactForm = () => (
       }}
     >
       <div className="flex flex-col max-w-4xl mx-auto">
-        <div className="flex">
-          <div className="flex-1">
-            <Input name="email" label="Your Email" />
-            <Input name="website" label="Company Website" />
-          </div>
-          <div className="flex-1">
-            <Input name="name" label="Your Name" />
-          </div>
-        </div>
+        <Input name="email" label="Your Email" />
+        <Input name="website" label="Company Website" />
+        <Input name="name" label="Your Name" />
         <TextArea name="about" label="Tell us about your project" />
       </div>
 

@@ -4,7 +4,7 @@ import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 
 export const FeaturesTwo = () => (
-  <div id="tools">
+  <div id="tools" className="px-8">
     <Content
       className="max-w-4xl my-32 text-center"
       heading="Take what you need when you need it\nWe’re flexible"
@@ -38,10 +38,9 @@ export const FeaturesTwo = () => (
       </LineItem>
     </div>
 
-    <div className="flex max-w-6xl mx-auto my-32">
+    <div className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-32">
       <div className="flex-1 flex flex-col align-center justify-center mr-10">
-        <h2>Friendly for your users</h2>
-        <h2>Easy for you</h2>
+        <h2>Integrate Sequence in four lines of code</h2>
 
         <p className="mt-4">
           A fast and simple item creation tool. A friendly smart wallet for
@@ -63,7 +62,7 @@ export const FeaturesTwo = () => (
 )
 
 const LineItem = ({ heading, children }) => (
-  <div className="flex bg-offwhite rounded my-4 px-6 py-16 justify-center items-center">
+  <div className="flex flex-col md:flex-row bg-offwhite rounded my-4 px-6 py-16 justify-center items-center">
     <div className="flex-1 flex items-center">
       <div className="mr-4" style={{ width: 42 }}>
         <img alt="bullet" src={bulletPng} />
