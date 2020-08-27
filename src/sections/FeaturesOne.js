@@ -18,7 +18,12 @@ export const FeaturesOne = () => (
 
     <div className="flex flex-col lg:flex-row items-center my-20 max-w-5xl mx-auto">
       <div className="flex-1 flex items-center">
-        <img alt="features" src={featurePng} width={530} />
+        <img
+          alt="features"
+          src={featurePng}
+          width={530}
+          style={{ mixBlendMode: "multiply" }}
+        />
       </div>
 
       <div>

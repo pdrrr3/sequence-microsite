@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #f2f2f2;
+}
+
 @font-face {
   font-family: Euclid Circular B;
   font-weight: 400;
@@ -114,6 +118,7 @@ p {
 
 .input {
   border: 1.5px solid #aaaae3;
+  background-color: transparent;
   box-sizing: border-box;
   border-radius: 15px;
   min-height: 52px;
@@ -123,6 +128,7 @@ p {
 
 .textarea {
   border: 1.5px solid #aaaae3;
+  background-color: transparent;
   box-sizing: border-box;
   border-radius: 15px;
   min-height: 200px;

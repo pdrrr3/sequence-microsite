@@ -32,7 +32,7 @@ export const Button = ({
     >
       {gradientBorder && (
         <div
-          className="absolute bg-white"
+          className="absolute bg-offwhite"
           style={{
             top: 2,
             right: 2,

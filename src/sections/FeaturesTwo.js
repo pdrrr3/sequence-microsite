@@ -55,14 +55,25 @@ export const FeaturesTwo = () => (
       </div>
 
       <div>
-        <img alt="features" src={featurePng} width={530} />
+        <img
+          alt="features"
+          src={featurePng}
+          width={530}
+          style={{ mixBlendMode: "multiply" }}
+        />
       </div>
     </div>
   </div>
 )
 
 const LineItem = ({ heading, children }) => (
-  <div className="flex flex-col md:flex-row bg-offwhite rounded my-4 px-6 py-16 justify-center md:items-center">
+  <div
+    className="flex flex-col md:flex-row bg-white rounded my-4 px-6 py-16 justify-center md:items-center"
+    style={{
+      borderRadius: 30,
+      filter: "drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.05))",
+    }}
+  >
     <div className="flex-1 flex items-center mb-4 md:mb-0">
       <div className="mr-2 md:mr-4 relative" style={{ left: -5, width: 42 }}>
         <img alt="bullet" src={bulletPng} />
