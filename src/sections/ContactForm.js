@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "./Button"
+import { Button } from "../components/Button"
 
 export const ContactForm = () => (
   <div id="contact" className="text-center my-20 px-8">

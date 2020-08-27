@@ -19,7 +19,7 @@ export const MailingListInput = ({ small }) => (
     className="bg-light-gray self-stretch rounded-full mt-4 flex overflow-hidden"
     style={{ height: small ? 50 : 60 }}
   >
-    <input className="w-full bg-transparent outline-none" />
+    <input className="w-full bg-transparent pl-6 outline-none" />
     <button className="block rounded-full px-12 bg-medium-gray text-dark-gray">
       Join
     </button>

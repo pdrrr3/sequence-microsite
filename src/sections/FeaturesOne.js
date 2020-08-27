@@ -1,6 +1,6 @@
 import React from "react"
-import { Content } from "./Content"
-import { Button } from "./Button"
+import { Content } from "../components/Content"
+import { Button } from "../components/Button"
 import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 

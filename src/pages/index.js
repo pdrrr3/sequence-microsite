@@ -2,22 +2,24 @@ import React from "react"
 import { Head } from "../components/Head"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
-import { Hero } from "../components/Hero"
 import { MailingList } from "../components/MailingList"
-import { FeaturesOne } from "../components/FeaturesOne"
-import { SkyweaverCallout } from "../components/SkyweaverCallout"
-import { FeaturesTwo } from "../components/FeaturesTwo"
-import { ContactForm } from "../components/ContactForm"
+
+import { Hero } from "../sections/Hero"
+import { FeaturesOne } from "../sections/FeaturesOne"
+import { SkyweaverCallout } from "../sections/SkyweaverCallout"
+import { FeaturesTwo } from "../sections/FeaturesTwo"
+import { ContactForm } from "../sections/ContactForm"
+
 import "../index.css"
 
 export default function Home() {
   return (
     <div>
+      <Head />
+
+      <Header />
+
       <div className="container">
-        <Head />
-
-        <Header />
-
         <Hero />
 
         <MailingList />
