@@ -34,6 +34,19 @@ h4 {
   @apply text-blue;
 }
 
+h1,
+h2 {
+  background: linear-gradient(
+      76.42deg,
+      rgba(40, 161, 211, 0) 20.86%,
+      rgba(34, 201, 191, 0.75) 88.57%
+    ),
+    #342abc;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 p,
 .button {
   font-family: Inter;
@@ -134,4 +147,8 @@ p {
   min-height: 200px;
   outline: none;
   padding: 10px 20px;
+}
+
+.text-white {
+  -webkit-text-fill-color: initial;
 }

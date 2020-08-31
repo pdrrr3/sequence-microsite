@@ -22,7 +22,7 @@ export const Button = ({
         minWidth: small ? 120 : 200,
         maxWidth: 300,
         background: gradientFill
-          ? "linear-gradient(85.44deg, #AD64B9 0%, #6664B9 43.75%, #64B9AA 82.81%, #98E18C 100%)"
+          ? "linear-gradient(85.44deg, #AB3DBD 0%, #342ABC 47.92%, #20AE95 100%), linear-gradient(85.44deg, #AB3DBD 0%, #342ABC 43.75%, #31AA94 82.81%, #6CE359 100%), linear-gradient(85.44deg, #AD64B9 0%, #6664B9 43.75%, #64B9AA 82.81%, #98E18C 100%)"
           : gradientBorder
           ? "linear-gradient(85.44deg, #342ABC 0%, #28A1D3 100%)"
           : undefined,
