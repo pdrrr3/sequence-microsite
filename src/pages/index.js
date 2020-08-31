@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
+import sal from "sal.js"
+
 import { Head } from "../components/Head"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
@@ -10,10 +12,16 @@ import { SkyweaverCallout } from "../sections/SkyweaverCallout"
 import { FeaturesTwo } from "../sections/FeaturesTwo"
 import { ContactForm } from "../sections/ContactForm"
 import { Shimmer } from "../components/Shimmer"
+import { fadeProps } from "../constants"
 
+import "sal.js/dist/sal.css"
 import "../index.css"
 
 export default function Home() {
+  useEffect(() => {
+    sal()
+  }, [])
+
   return (
     <div style={{ overflowX: "hidden" }}>
       <Head />
@@ -24,7 +32,9 @@ export default function Home() {
 
       <Hero />
 
-      <MailingList />
+      <div {...fadeProps}>
+        <MailingList />
+      </div>
 
       <FeaturesOne />
 

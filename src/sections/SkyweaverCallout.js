@@ -2,12 +2,16 @@ import React from "react"
 import { Button } from "../components/Button"
 import skyweaverPng from "../assets/skyweaver.png"
 import skyweaverBGPng from "../assets/skyweaverbg.png"
+import { fadeProps } from "../constants"
 
 export const SkyweaverCallout = () => (
   <div className="relative text-white mb-20 pt-4 pb-6 md:pt-20 md:pb-32 md:text-center">
     <SkyweaverBackground />
 
-    <div className="mx-auto max-w-xl flex flex-col items-center py-12">
+    <div
+      {...fadeProps}
+      className="mx-auto max-w-xl flex flex-col items-center py-12"
+    >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
       <h3 className="text-white mt-4 mb-10">Powered by Sequence</h3>
       <p className="text-white px-10">

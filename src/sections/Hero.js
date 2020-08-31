@@ -1,10 +1,14 @@
 import React from "react"
 import { Button } from "../components/Button"
 import techLogosPng from "../assets/tech-logos.png"
+import { fadeProps } from "../constants"
 
 export const Hero = () => (
   <div className="container px-12">
-    <div className="mx-auto max-w-xl flex flex-col justify-center text-center my-24">
+    <div
+      {...fadeProps}
+      className="mx-auto max-w-xl flex flex-col justify-center text-center my-24"
+    >
       <h1>An open stack for Blockchain development</h1>
 
       <p className="mx-auto max-w-md my-8 px-2">
@@ -23,6 +27,7 @@ export const Hero = () => (
     </div>
 
     <div
+      {...fadeProps}
       className="bg-blue max-w-3xl px-12 py-12 md:px-32 md:py-20 my-40 mx-auto text-center items-center justify-center"
       style={{
         background:

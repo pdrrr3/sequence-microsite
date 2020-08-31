@@ -4,21 +4,24 @@ import { Button } from "../components/Button"
 import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 import { BottomShimmer } from "../components/Shimmer"
+import { fadeProps } from "../constants"
 
 export const FeaturesOne = () => (
   <div className="relative">
     <BottomShimmer />
 
     <div className="container px-12">
-      <Content
-        className="md:text-center"
-        heading="Friendly for your users\nEasy for you"
-      >
-        A fast and simple item creation tool. A friendly smart wallet for users
-        to securely store and manage their items. Invisible fees and high
-        transaction throughput. All making it easy for your users to buy, sell
-        and trade with one another.
-      </Content>
+      <div {...fadeProps}>
+        <Content
+          className="md:text-center"
+          heading="Friendly for your users\nEasy for you"
+        >
+          A fast and simple item creation tool. A friendly smart wallet for
+          users to securely store and manage their items. Invisible fees and
+          high transaction throughput. All making it easy for your users to buy,
+          sell and trade with one another.
+        </Content>
+      </div>
 
       <div className="flex flex-col lg:flex-row items-center my-20 max-w-5xl mx-auto">
         <div className="flex-1 flex items-center">
@@ -51,7 +54,10 @@ export const FeaturesOne = () => (
         </div>
       </div>
 
-      <div className="mx-auto max-w-2xl flex flex-col mt-40 pb-32 text-center">
+      <div
+        {...fadeProps}
+        className="mx-auto max-w-2xl flex flex-col mt-40 pb-32 text-center"
+      >
         <h2 className="px-4">Ready to Sequence your product?</h2>
         <Button gradientBorder className="mx-auto mt-8">
           Contact Us
