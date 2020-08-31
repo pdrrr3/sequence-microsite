@@ -3,7 +3,7 @@ import logoPng from "../assets/logo.png"
 import { MailingListInput } from "./MailingList"
 
 export const Footer = () => (
-  <footer className="px-8">
+  <footer className="container px-8">
     <div className="flex flex-col md:flex-row items-center md:items-start flex-1 justify-between py-20">
       <div className="flex flex-col flex-1 items-center text-center max-w-xs md:items-start">
         <img

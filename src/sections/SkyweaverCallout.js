@@ -4,7 +4,7 @@ import skyweaverPng from "../assets/skyweaver.png"
 import skyweaverBGPng from "../assets/skyweaverbg.png"
 
 export const SkyweaverCallout = () => (
-  <div className="relative text-white my-20 pt-4 pb-6 md:pt-20 md:pb-32 md:text-center">
+  <div className="relative text-white mb-20 pt-4 pb-6 md:pt-20 md:pb-32 md:text-center">
     <SkyweaverBackground />
 
     <div className="mx-auto max-w-xl flex flex-col items-center py-12">

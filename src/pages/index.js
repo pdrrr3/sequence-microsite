@@ -9,33 +9,32 @@ import { FeaturesOne } from "../sections/FeaturesOne"
 import { SkyweaverCallout } from "../sections/SkyweaverCallout"
 import { FeaturesTwo } from "../sections/FeaturesTwo"
 import { ContactForm } from "../sections/ContactForm"
+import { Shimmer } from "../components/Shimmer"
 
 import "../index.css"
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Head />
+
+      <Shimmer />
 
       <Header />
 
-      <div className="container">
-        <Hero />
+      <Hero />
 
-        <MailingList />
+      <MailingList />
 
-        <FeaturesOne />
-      </div>
+      <FeaturesOne />
 
       <SkyweaverCallout />
 
-      <div className="container">
-        <FeaturesTwo />
+      <FeaturesTwo />
 
-        <ContactForm />
+      <ContactForm />
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   )
 }

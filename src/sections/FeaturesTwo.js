@@ -4,7 +4,7 @@ import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 
 export const FeaturesTwo = () => (
-  <div id="tools" className="px-12">
+  <div id="tools" className="container px-12">
     <Content
       className="max-w-4xl my-32 md:text-center"
       heading="Take what you need when you need it\nWe’re flexible"
