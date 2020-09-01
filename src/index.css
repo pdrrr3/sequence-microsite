@@ -4,6 +4,7 @@
 
 body {
   background-color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -35,7 +36,9 @@ h4 {
 }
 
 h1,
-h2 {
+h2,
+h3.gradient,
+h4.gradient {
   background: linear-gradient(
       76.42deg,
       rgba(40, 161, 211, 0) 20.86%,
@@ -79,6 +82,16 @@ p {
 
 .button {
   font-size: 20px;
+}
+
+.button,
+a {
+  transition: opacity 500ms;
+}
+
+.button:hover,
+a:hover {
+  opacity: 0.65;
 }
 
 .label {
@@ -151,4 +164,51 @@ p {
 
 .text-white {
   -webkit-text-fill-color: initial;
+}
+
+.shimmer {
+  animation: grow 4s ease-in-out infinite alternate;
+}
+
+.slide {
+  opacity: 0;
+  animation: slide 12s ease-in-out infinite alternate;
+}
+
+.gradientShift {
+  background-size: 200%;
+  transition: background-size 500ms;
+}
+
+.gradientShift:hover {
+  opacity: 1 !important;
+  background-size: 100%;
+}
+
+.gradientShift.small:hover {
+  background-size: 150%;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
 }

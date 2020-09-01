@@ -4,7 +4,7 @@ export const Shimmer = ({ ...props }) => {
   return (
     <div
       className="absolute overflow-hidden"
-      style={{ zIndex: -1, width: "99vw", height: "100vh" }}
+      style={{ zIndex: -1, width: "100vw", height: "100vh", minHeight: 1000 }}
     >
       <ShimmerItem
         size={1000}
@@ -42,7 +42,13 @@ export const BottomShimmer = ({ ...props }) => {
   return (
     <div
       className="absolute overflow-hidden"
-      style={{ zIndex: -1, width: "99vw", height: "100vh", bottom: 0 }}
+      style={{
+        zIndex: -1,
+        width: "100vw",
+        height: "100vh",
+        minHeight: 1000,
+        bottom: 0,
+      }}
     >
       <ShimmerItem
         size={1000}
@@ -78,7 +84,7 @@ export const BottomShimmer = ({ ...props }) => {
 
 const ShimmerItem = ({ size, x, y, color, color2 }) => (
   <div
-    className="absolute"
+    className="absolute shimmer"
     style={{
       width: size,
       height: size,

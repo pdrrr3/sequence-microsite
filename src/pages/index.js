@@ -32,7 +32,15 @@ export default function Home() {
 
       <Hero />
 
-      <div {...fadeProps}>
+      <div
+        className="bg-white max-w-4xl mx-auto py-20 px-6 lg:px-24 mb-48"
+        style={{
+          borderRadius: 30,
+          marginTop: 350,
+          boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.1)",
+        }}
+        {...fadeProps}
+      >
         <MailingList />
       </div>
 

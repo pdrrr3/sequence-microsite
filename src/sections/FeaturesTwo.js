@@ -19,7 +19,7 @@ export const FeaturesTwo = () => (
       </Content>
     </div>
 
-    <div {...fadeProps} className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-6xl">
       <LineItem heading="Intuitive User Experience">
         No matter where you’re at in your development journey, we’re here to
         help. Sequence is open source and customizable. We use Sequence
@@ -65,7 +65,7 @@ export const FeaturesTwo = () => (
           alt="features"
           src={featurePng}
           width={530}
-          style={{ mixBlendMode: "multiply" }}
+          style={{ mixBlendMode: "multiply", borderRadius: 30 }}
         />
       </div>
     </div>
@@ -84,7 +84,9 @@ const LineItem = ({ heading, children }) => (
       <div className="mr-2 md:mr-4 relative" style={{ left: -5, width: 42 }}>
         <img alt="bullet" src={bulletPng} />
       </div>
-      <h3 style={{ lineHeight: 1 }}>{heading}</h3>
+      <h3 className="text-blue" style={{ lineHeight: 1 }}>
+        {heading}
+      </h3>
     </div>
     <div className="flex-1">
       <p>{children}</p>
