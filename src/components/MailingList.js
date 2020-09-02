@@ -25,13 +25,7 @@ export const MailingListInput = ({ small }) => (
     style={{ height: small ? 50 : 60 }}
   >
     <input className="w-full bg-transparent pl-6 outline-none" />
-    <button
-      className="block rounded-full px-12 bg-medium-gray text-dark-gray gradientShift"
-      style={{
-        backgroundImage:
-          "linear-gradient(85.44deg,#cccbda 0%, #cccbda 50%, #b8e0d9 70%)",
-      }}
-    >
+    <button className="block rounded-full px-12 bg-medium-gray text-dark-gray relative gradient-shift">
       Join
     </button>
   </div>

@@ -12,7 +12,7 @@ export const Button = ({
   return (
     <Component
       className={`button inline-block rounded-full bg-blue text-center relative ${
-        gradientFill ? "gradientShift small" : ""
+        gradientFill ? "gradient-shift" : ""
       } ${className} ${
         gradientBorder
           ? "text-blue"
@@ -24,7 +24,7 @@ export const Button = ({
         minWidth: small ? 120 : 200,
         maxWidth: 300,
         backgroundImage: gradientFill
-          ? "linear-gradient(85.44deg, #AD64B9 0%, #342abc 22%, #64B9AA 50%)"
+          ? "linear-gradient(85.44deg, #AD64B9 0%, #342abc 25%, #64B9AA 100%)"
           : gradientBorder
           ? "linear-gradient(85.44deg, #342ABC 0%, #28A1D3 100%)"
           : undefined,
