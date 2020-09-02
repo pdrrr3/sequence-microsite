@@ -147,7 +147,7 @@ a:hover {
   );
   background-size: 200%;
   background-position-x: -100%;
-  transition: background-position-x 500ms;
+  transition: background-position-x 1s;
 }
 
 .gradient-shift:hover::before {
