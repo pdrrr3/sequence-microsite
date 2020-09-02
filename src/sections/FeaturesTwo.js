@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react"
+import React from "react"
 import { Content } from "../components/Content"
 import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
@@ -74,6 +74,7 @@ export const FeaturesTwo = () => (
 
 const LineItem = ({ heading, children }) => (
   <div
+    {...fadeProps}
     className="flex flex-col md:flex-row bg-white rounded my-4 px-6 py-16 justify-center md:items-center"
     style={{
       borderRadius: 30,
