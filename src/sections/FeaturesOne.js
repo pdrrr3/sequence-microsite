@@ -27,9 +27,9 @@ export const FeaturesOne = () => (
         <div className="flex-1 flex items-center mr-8">
           <img
             alt="features"
+            className="rounded"
             src={featurePng}
             width={530}
-            style={{ mixBlendMode: "multiply", borderRadius: 30 }}
           />
         </div>
 

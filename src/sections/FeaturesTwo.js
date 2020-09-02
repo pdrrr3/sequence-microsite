@@ -61,12 +61,7 @@ export const FeaturesTwo = () => (
       </div>
 
       <div>
-        <img
-          alt="features"
-          src={featurePng}
-          width={530}
-          style={{ mixBlendMode: "multiply", borderRadius: 30 }}
-        />
+        <img alt="features" className="rounded" src={featurePng} width={530} />
       </div>
     </div>
   </div>
@@ -77,7 +72,6 @@ const LineItem = ({ heading, children }) => (
     {...fadeProps}
     className="flex flex-col md:flex-row bg-white rounded my-4 px-6 py-16 justify-center md:items-center"
     style={{
-      borderRadius: 30,
       filter: "drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.05))",
     }}
   >

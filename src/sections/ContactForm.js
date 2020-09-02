@@ -65,18 +65,6 @@ const TextArea = ({ name, label }) => (
   </InputBase>
 )
 
-// const Select = ({ name, label, options = [] }) => (
-//   <InputBase name={name} label={label}>
-//     <select type="text" id={name} name={name}>
-//       {options.map((o, i) => (
-//         <option key={`option-${i}`} value={o}>
-//           {o}
-//         </option>
-//       ))}
-//     </select>
-//   </InputBase>
-// )
-
 const InputBase = ({ name, label, children }) => (
   <div className="flex flex-1 flex-col text-left mx-2 mb-6">
     <label className="label mb-2" htmlFor={name}>

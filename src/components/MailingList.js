@@ -1,15 +1,22 @@
 import React from "react"
+import { fadeProps } from "../constants"
 
 export const MailingList = () => (
-  <form>
-    <div className="flex flex-col items-center text-center sm: text-left">
-      <h3 className="px-12 mb-6 gradient">
-        Join our mailing list for updates and exclusive news
-      </h3>
+  <div
+    className="bg-white max-w-4xl mx-auto rounded py-20 px-6 lg:px-24 mb-48 shadow"
+    style={{ marginTop: 350 }}
+    {...fadeProps}
+  >
+    <form>
+      <div className="flex flex-col items-center text-center sm: text-left">
+        <h3 className="px-12 mb-6 gradient">
+          Join our mailing list for updates and exclusive news
+        </h3>
 
-      <MailingListInput />
-    </div>
-  </form>
+        <MailingListInput />
+      </div>
+    </form>
+  </div>
 )
 
 export const MailingListInput = ({ small }) => (
