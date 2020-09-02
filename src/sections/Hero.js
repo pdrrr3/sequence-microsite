@@ -28,12 +28,16 @@ export const Hero = () => (
 
     <div className="relative">
       <div className="relative" style={{ zIndex: -1, opacity: 0.3 }}>
-        <Transaction index={0} x={100} y={-100} />
-        <Transaction index={1} x={-250} y={100} />
-        <Transaction index={2} x={800} y={250} />
-        <Transaction index={3} x={900} y={-50} />
-        <Transaction index={4} x={-80} y={340} />
-        <Transaction index={5} x={250} y={450} />
+        <Transaction index={0} x={-300} y={-100} />
+        <Transaction index={1} x={-250} y={50} />
+        <Transaction index={2} x={-150} y={200} />
+        <Transaction index={3} x={-100} y={350} />
+        <Transaction index={4} x={0} y={450} />
+        <Transaction index={5} x={1000} y={-50} />
+        <Transaction index={6} x={1050} y={150} />
+        <Transaction index={7} x={1100} y={250} />
+        <Transaction index={8} x={1200} y={300} />
+        <Transaction index={9} x={1250} y={400} />
       </div>
       <div
         // {...fadeProps}
@@ -74,7 +78,7 @@ const Transaction = ({ index, x = 0, y = 0 }) => (
     style={{
       background: "linear-gradient(0deg, #FFFFFF, #FFFFFF), url(image.png)",
       boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.1)",
-      animationDelay: `${index * 2000}ms`,
+      animationDelay: `${index * 1000}ms`,
       animationDirection: index % 2 === 0 ? "alternate-reverse" : "alternate",
       width: 600,
       left: x,
@@ -82,7 +86,7 @@ const Transaction = ({ index, x = 0, y = 0 }) => (
       borderRadius: 30,
     }}
   >
-    <h4 className="mb-3">Block #10686414</h4>
+    <h4 className="mb-3 gradient inline">Block #10686414</h4>
     <div className="flex">
       <div className="mr-6">
         <p>Timestamp</p>

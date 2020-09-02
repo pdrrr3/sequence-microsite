@@ -200,15 +200,19 @@ a:hover {
 
 @keyframes slide {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
     opacity: 0;
   }
-  50% {
+  10% {
     opacity: 1;
     transform: translateX(0px);
   }
-  100% {
+  40% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  50% {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(100px);
   }
 }
