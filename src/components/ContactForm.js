@@ -1,6 +1,6 @@
 import React from "react"
-import { Button } from "../components/Button"
-import { BottomShimmer } from "../components/Shimmer"
+import { Button } from "./Button"
+import { BottomShimmer } from "./Shimmer"
 
 export const ContactForm = () => (
   <div className="relative">
@@ -34,12 +34,7 @@ export const ContactForm = () => (
           <TextArea name="about" label="Tell us about your project" />
         </div>
 
-        <Button
-          gradientBorder
-          Component="button"
-          className="mt-4"
-          type="submit"
-        >
+        <Button border Component="button" className="mt-4" type="submit">
           Submit
         </Button>
       </form>

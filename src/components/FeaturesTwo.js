@@ -1,22 +1,23 @@
 import React from "react"
-import { Content } from "../components/Content"
 import featurePng from "../assets/feature.png"
 import bulletPng from "../assets/bullet.png"
 import { fadeProps } from "../constants"
 
 export const FeaturesTwo = () => (
-  <div id="tools" className="container px-12">
+  <div id="tools" className="container px-">
     <div {...fadeProps}>
-      <Content
-        className="max-w-4xl my-32 md:text-center"
-        heading="Take what you need when you need it\nWe’re flexible"
-      >
-        <span className="max-w-xl mx-auto">
+      <div className="mx-auto max-w-lg my-5 max-w-4xl px-8 my-32 md:text-center">
+        <h2>
+          Take what you need when you need it
+          <br />
+          We’re flexible
+        </h2>
+        <p className="mt-4 max-w-xl mx-auto">
           No matter where you’re at in your development journey, we’re here to
           help. Sequence is open source and customizable. We use Sequence
           ourselves, and we understand that every product has different needs.
-        </span>
-      </Content>
+        </p>
+      </div>
     </div>
 
     <div className="mx-auto max-w-6xl">
@@ -44,7 +45,7 @@ export const FeaturesTwo = () => (
     <div className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-32">
       <div
         {...fadeProps}
-        className="flex-1 flex flex-col align-center justify-center mr-10"
+        className="flex-1 flex flex-col align-center justify-center mr-10 px-8"
       >
         <h2>Integrate Sequence in four lines of code</h2>
 
@@ -60,7 +61,7 @@ export const FeaturesTwo = () => (
         </p>
       </div>
 
-      <div>
+      <div className="mt-6">
         <img alt="features" className="rounded" src={featurePng} width={530} />
       </div>
     </div>

@@ -13,7 +13,7 @@ export const Header = () => (
     <div className="hidden sm:flex flex-1 justify-end items-center">
       <HeaderLink href="/#tools">Tools</HeaderLink>
       <HeaderLink href="/#contact">Contact</HeaderLink>
-      <Button gradientFill small className="ml-4">
+      <Button small className="ml-4">
         Try Wallet
       </Button>
     </div>

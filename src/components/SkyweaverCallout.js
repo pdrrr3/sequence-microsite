@@ -24,7 +24,9 @@ export const SkyweaverCallout = () => (
         SkyWeaver is pioneering community-owned economies in gaming, and it’s
         powered by Sequence.
       </p>
-      <Button className="mt-16 bg-white text-blue">Visit Website</Button>
+      <Button solid className="mt-16 bg-white text-blue">
+        Visit Website
+      </Button>
     </div>
   </div>
 )

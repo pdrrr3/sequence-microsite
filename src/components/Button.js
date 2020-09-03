@@ -2,37 +2,33 @@ import React from "react"
 
 export const Button = ({
   children,
-  className = "",
-  gradientFill,
-  gradientBorder,
+  border,
+  solid,
   small,
+  className = "",
   Component = "a",
   ...props
 }) => {
   return (
     <Component
       className={`button inline-block rounded-full bg-blue text-center relative ${
-        gradientFill ? "gradient-shift" : ""
+        !border && !solid ? "gradient-shift" : ""
       } ${className} ${
-        gradientBorder
-          ? "text-blue"
-          : className.match(/text-/)
-          ? ""
-          : "text-white"
+        border ? "text-blue" : className.match(/text-/) ? "" : "text-white"
       } ${small ? "px-2 py-2" : "px-2 py-4"}`}
       style={{
         minWidth: small ? 120 : 200,
         maxWidth: 300,
-        backgroundImage: gradientFill
-          ? "linear-gradient(85.44deg, #AD64B9 0%, #342abc 25%, #64B9AA 100%)"
-          : gradientBorder
+        backgroundImage: border
           ? "linear-gradient(85.44deg, #342ABC 0%, #28A1D3 100%)"
-          : undefined,
+          : solid
+          ? undefined
+          : "linear-gradient(85.44deg, #AD64B9 0%, #342abc 25%, #64B9AA 100%)",
       }}
       href="/#"
       {...props}
     >
-      {gradientBorder && (
+      {border && (
         <div
           className="absolute bg-offwhite"
           style={{

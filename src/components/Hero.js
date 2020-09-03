@@ -17,10 +17,8 @@ export const Hero = () => (
       </p>
 
       <div className="flex flex-col xs-flex-row items-center mt-3 max-w-md mx-auto">
-        <Button gradientFill className="flex-1 mx-2 mb-4">
-          Try Wallet
-        </Button>
-        <Button gradientBorder className="flex-1 mx-2 mb-4">
+        <Button className="flex-1 mx-2 mb-4">Try Wallet</Button>
+        <Button border className="flex-1 mx-2 mb-4">
           Book a Demo
         </Button>
       </div>
@@ -67,20 +65,20 @@ const BlockAnimation = () => (
       opacity: 0.3,
     }}
   >
-    <Block index={0} x={-300} y={-100} />
-    <Block index={1} x={-250} y={50} />
-    <Block index={2} x={-150} y={200} />
-    <Block index={3} x={-100} y={350} />
-    <Block index={4} x={0} y={450} />
-    <Block index={5} x={1000} y={-50} />
-    <Block index={6} x={1050} y={150} />
-    <Block index={7} x={1100} y={250} />
-    <Block index={8} x={1200} y={300} />
-    <Block index={9} x={1250} y={400} />
+    <Block index={0} left={-120} top={-100} />
+    <Block index={1} left={-80} top={50} />
+    <Block index={2} left={-160} top={200} />
+    <Block index={3} left={-50} top={350} />
+    <Block index={4} left={-10} top={450} />
+    <Block index={5} right={-350} top={-50} />
+    <Block index={6} right={-490} top={150} />
+    <Block index={7} right={-380} top={240} />
+    <Block index={8} right={-390} top={360} />
+    <Block index={9} right={-430} top={520} />
   </div>
 )
 
-const Block = ({ index, x = 0, y = 0 }) => (
+const Block = ({ index, left, top, right }) => (
   <div
     className="p-8 absolute slide rounded shadow"
     style={{
@@ -88,8 +86,9 @@ const Block = ({ index, x = 0, y = 0 }) => (
       animationDelay: `${index * 1000}ms`,
       animationDirection: index % 2 === 0 ? "alternate-reverse" : "alternate",
       width: 600,
-      left: x,
-      top: y,
+      right,
+      left,
+      top,
     }}
   >
     <h4 className="mb-3 gradient inline">Block #10686414</h4>

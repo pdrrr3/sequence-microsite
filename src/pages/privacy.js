@@ -7,7 +7,7 @@ import "../index.css"
 export default function Privacy() {
   return (
     <div>
-      <div className="container">
+      <div className="container px-8">
         <Head />
 
         <Header />
