@@ -21,7 +21,7 @@ export const Header = () => (
 )
 
 const HeaderLink = ({ children, href = "/#" }) => (
-  <a href={href} className="px-5 text-blue">
+  <a href={href} className="px-5 text-white">
     {children}
   </a>
 )

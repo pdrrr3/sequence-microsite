@@ -4,11 +4,11 @@ import { BottomShimmer } from "./Shimmer"
 
 export const ContactForm = () => (
   <div className="relative">
-    <BottomShimmer />
+    {/* <BottomShimmer /> */}
 
     <div id="contact" className="container text-center mt-20 pb-32 px-8">
       <div className="max-w-2xl mx-auto mb-16">
-        <h2>Get in Touch</h2>
+        <h2>Get a Demo</h2>
 
         <p className="mt-4">
           Find out more about how you Sequence can help you build the next
@@ -34,7 +34,7 @@ export const ContactForm = () => (
           <TextArea name="about" label="Tell us about your project" />
         </div>
 
-        <Button border Component="button" className="mt-4" type="submit">
+        <Button Component="button" className="mt-4" type="submit">
           Submit
         </Button>
       </form>

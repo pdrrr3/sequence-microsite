@@ -7,20 +7,16 @@ export const Hero = () => (
   <div className="container px-8">
     <div
       {...fadeProps}
-      className="mx-auto max-w-xl flex flex-col justify-center text-center my-24"
+      className="mx-auto max-w-2xl flex flex-col justify-center text-center my-24"
     >
-      <h1>An open stack for Blockchain development</h1>
+      <h1>A seamless user and developer experience for Ethereum</h1>
 
-      <p className="mx-auto max-w-md my-8 px-2">
-        <span className="font-bold">Sequence</span> lets you integrate
-        blockchain with your product in two minutes
+      <p className="mx-auto max-w-2xl my-8 px-2" style={{ fontWeight: "500" }}>
+        Sequence lets you integrate blockchain with your product in two minutes
       </p>
 
       <div className="flex flex-col xs-flex-row items-center mt-3 max-w-md mx-auto">
-        <Button className="flex-1 mx-2 mb-4">Try Wallet</Button>
-        <Button border className="flex-1 mx-2 mb-4">
-          Book a Demo
-        </Button>
+        <Button className="flex-1 mx-2 mb-4">Get Started</Button>
       </div>
     </div>
 
@@ -28,30 +24,35 @@ export const Hero = () => (
       <BlockAnimation />
 
       <div
-        className="bg-blue max-w-3xl px-8 py-12 md:px-32 md:py-20 my-40 mx-auto text-center items-center justify-center rounded shadow"
+        className="bg-blue max-w-3xl px-8 py-12 md:px-16 md:py-20 my-40 mx-auto text-center items-center justify-center rounded shadow"
         style={{
           background:
-            "linear-gradient(222.39deg, rgba(171, 66, 148, 0) 68.93%, #AB4294 115.85%), linear-gradient(61.57deg, rgba(30, 118, 154, 0) 19.77%, #56C6CD 85.93%), #342ABC",
+            "linear-gradient(0deg, rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), linear-gradient(222.39deg, rgba(174, 38, 145, 0) 68.93%, #AB4294 115.85%), linear-gradient(61.57deg, rgba(30, 118, 154, 0) 19.77%, #56C6CD 85.93%), linear-gradient(0deg, #342ABC, #342ABC)",
         }}
       >
         <h2 className="text-white mb-6">
           Enter the next generation of Internet economies
         </h2>
 
-        <p className="text-white mb-12 mx-1">
+        <p className="mb-12 mx-1">
           From digital collectibles to video game items and virtual real estate,
-          digital worlds are becoming more real and valuable than ever before.{" "}
-          <span className="font-bold">Sequence</span> is your gateway to access
-          and build in this new dimension of commerce.
+          digital worlds are becoming more real and valuable than ever before.
+          Sequence is your gateway to access and build in this new dimension.
         </p>
 
         <p
           className="text-white mb-6"
-          style={{ fontSize: 16, fontWeight: 300, opacity: 0.8 }}
+          style={{ fontSize: 16, fontWeight: 300, opacity: 0.5 }}
         >
-          Compatible with 30+ web technologies
+          Compatible with everything on Ethereum
         </p>
-        <img className="mx-auto" alt="logos" src={techLogosPng} width={475} />
+        <img
+          className="mx-auto"
+          alt="logos"
+          src={techLogosPng}
+          width={475}
+          style={{ opacity: 0.5 }}
+        />
       </div>
     </div>
   </div>
@@ -82,7 +83,8 @@ const Block = ({ index, left, top, right }) => (
   <div
     className="p-8 absolute slide rounded shadow"
     style={{
-      background: "linear-gradient(0deg, #FFFFFF, #FFFFFF), url(image.png)",
+      background:
+        "linear-gradient(83.57deg, rgba(0, 0, 0, 0) 13.55%, rgba(34, 201, 191, 0.05) 98.35%), linear-gradient(265.77deg, rgba(0, 0, 0, 0) 44.4%, rgba(92, 47, 115, 0.2) 110.31%), linear-gradient(0deg, #222222, #222222)",
       animationDelay: `${index * 1000}ms`,
       animationDirection: index % 2 === 0 ? "alternate-reverse" : "alternate",
       width: 600,

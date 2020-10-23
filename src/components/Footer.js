@@ -1,10 +1,10 @@
 import React from "react"
-import logoPng from "../assets/logo.png"
+import logoPng from "../assets/logo-color.png"
 import footerPng from "../assets/footer.png"
 import { MailingListInput } from "./MailingList"
 
 export const Footer = () => (
-  <footer className="bg-white">
+  <footer style={{ background: "#151515" }}>
     <div className="container pl-8">
       <div className="flex flex-col lg:flex-row items-center lg:items-start flex-1 justify-between py-20">
         <div className="flex flex-col flex-1 items-center text-center lg:text-left max-w-xs lg:items-start">
@@ -61,7 +61,7 @@ export const Footer = () => (
 const FooterLink = ({ children, href = "#/" }) => (
   <a
     href={href}
-    className="px-2 py-2 lg:text-left text-dark-gray"
+    className="px-2 py-2 lg:text-left text-gray"
     style={{ fontSize: 16, minWidth: 150 }}
   >
     {children}

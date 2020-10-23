@@ -6,9 +6,8 @@ import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { MailingList } from "../components/MailingList"
 import { Hero } from "../components/Hero"
-import { FeaturesOne } from "../components/FeaturesOne"
+import { Features } from "../components/Features"
 import { SkyweaverCallout } from "../components/SkyweaverCallout"
-import { FeaturesTwo } from "../components/FeaturesTwo"
 import { ContactForm } from "../components/ContactForm"
 import { Shimmer } from "../components/Shimmer"
 import "sal.js/dist/sal.css"
@@ -23,7 +22,7 @@ export default function Home() {
     <div style={{ overflowX: "hidden" }}>
       <Head />
 
-      <Shimmer />
+      {/* <Shimmer /> */}
 
       <Header />
 
@@ -31,11 +30,9 @@ export default function Home() {
 
       <MailingList />
 
-      <FeaturesOne />
+      <Features />
 
       <SkyweaverCallout />
-
-      <FeaturesTwo />
 
       <ContactForm />
 
