@@ -12,11 +12,11 @@ export const Button = ({
     <Component
       className={`button inline-block rounded-full bg-blue text-center relative ${
         !solid ? "gradient-shift" : ""
-      } ${className} ${className.match(/text-/) ? "" : "text-white"} ${
+      } ${className} ${className.match(/text-/) ? "" : "text-medium-gray"} ${
         small ? "px-2 py-2" : "px-2 py-4"
       }`}
       style={{
-        minWidth: small ? 120 : 200,
+        minWidth: small ? 140 : 200,
         maxWidth: 300,
         backgroundImage: solid
           ? undefined

@@ -1,23 +1,24 @@
 import React from "react"
-import { Button } from "../components/Button"
 import techLogosPng from "../assets/tech-logos.png"
 import { fadeProps } from "../constants"
+import { MailingListInput } from "./MailingList"
 
 export const Hero = () => (
   <div className="container px-8">
     <div
       {...fadeProps}
-      className="mx-auto max-w-2xl flex flex-col justify-center text-center my-24"
+      className="mx-auto max-w-3xl flex flex-col justify-center text-center my-32 pt-8 pb-32"
     >
       <h1>A seamless user and developer experience for Ethereum</h1>
 
-      <p className="mx-auto max-w-2xl my-8 px-2" style={{ fontWeight: "500" }}>
+      <p
+        className="large mx-auto max-w-4xl my-4 px-2 text-light-gray"
+        // style={{ fontWeight: "500" }}
+      >
         Sequence lets you integrate blockchain with your product in two minutes
       </p>
 
-      <div className="flex flex-col xs-flex-row items-center mt-3 max-w-md mx-auto">
-        <Button className="flex-1 mx-2 mb-4">Get Started</Button>
-      </div>
+      <MailingListInput small className="w-full max-w-md mx-auto" />
     </div>
 
     <div className="relative">
@@ -34,7 +35,7 @@ export const Hero = () => (
           Enter the next generation of Internet economies
         </h2>
 
-        <p className="mb-12 mx-1">
+        <p className="mb-12 mx-1 text-light-gray">
           From digital collectibles to video game items and virtual real estate,
           digital worlds are becoming more real and valuable than ever before.
           Sequence is your gateway to access and build in this new dimension.
@@ -81,10 +82,8 @@ const BlockAnimation = () => (
 
 const Block = ({ index, left, top, right }) => (
   <div
-    className="p-8 absolute slide rounded shadow"
+    className="transaction-block p-8 absolute slide rounded shadow"
     style={{
-      background:
-        "linear-gradient(83.57deg, rgba(0, 0, 0, 0) 13.55%, rgba(34, 201, 191, 0.05) 98.35%), linear-gradient(265.77deg, rgba(0, 0, 0, 0) 44.4%, rgba(92, 47, 115, 0.2) 110.31%), linear-gradient(0deg, #222222, #222222)",
       animationDelay: `${index * 1000}ms`,
       animationDirection: index % 2 === 0 ? "alternate-reverse" : "alternate",
       width: 600,
@@ -93,7 +92,7 @@ const Block = ({ index, left, top, right }) => (
       top,
     }}
   >
-    <h4 className="mb-3 gradient inline">Block #10686414</h4>
+    <h4 className="mb-3 inline">Block #10686414</h4>
     <div className="flex">
       <div className="mr-6">
         <p>Timestamp</p>

@@ -46,11 +46,11 @@ h4.gradient {
     ),
     #342abc; */
   background: linear-gradient(
-      79.22deg,
-      rgba(101, 154, 176, 0) 32.91%,
-      rgba(101, 154, 176, 0.75) 91.8%
+      80.67deg,
+      rgba(40, 161, 211, 0) 22.48%,
+      rgba(34, 201, 191, 0.75) 119.36%
     ),
-    linear-gradient(0deg, #ffffff, #ffffff);
+    linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -58,8 +58,12 @@ h4.gradient {
 }
 
 p,
-.button {
+a {
   font-family: Inter;
+}
+
+p,
+.button {
   font-style: normal;
   font-weight: normal;
   line-height: 145%;
@@ -82,8 +86,13 @@ h4 {
   font-size: 21px;
 }
 
-p {
+a {
   @apply text-light-gray;
+  font-size: 16px;
+}
+
+p {
+  @apply text-gray;
   font-size: 23px;
 }
 
@@ -95,6 +104,7 @@ code {
   padding: 25px 25px 25px 35px;
   margin: 20px 0;
   line-height: 2;
+  font-size: 12px;
   white-space: pre;
 }
 
@@ -205,7 +215,7 @@ a:hover {
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .button {
@@ -214,6 +224,10 @@ a:hover {
 
   .label {
     font-size: 18px;
+  }
+
+  p.large {
+    font-size: 20px;
   }
 }
 
@@ -260,4 +274,69 @@ a:hover {
     opacity: 0;
     transform: translateX(100px);
   }
+}
+
+.transaction-block {
+  background: linear-gradient(
+      83.57deg,
+      rgba(0, 0, 0, 0) 13.55%,
+      rgba(34, 201, 191, 0.2) 98.35%
+    ),
+    linear-gradient(
+      265.77deg,
+      rgba(0, 0, 0, 0) 44.4%,
+      rgba(92, 47, 115, 0.4) 110.31%
+    ),
+    linear-gradient(0deg, #111, #111);
+
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  max-width: 440px;
+}
+
+.transaction-block p {
+  font-family: Inter;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.transaction-block h4 {
+  font-family: Inter;
+  font-size: 16px;
+}
+
+.transaction-block h4,
+.transaction-block p {
+  background: linear-gradient(
+      83.57deg,
+      rgba(0, 0, 0, 0) 13.55%,
+      rgba(34, 201, 191, 0.25) 98.35%
+    ),
+    linear-gradient(265.77deg, rgba(0, 0, 0, 0) 44.4%, #5c2f73 110.31%),
+    linear-gradient(0deg, #777, #777);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel__dot {
+  background-color: white;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+  border-radius: 5px;
+}
+
+.carousel__dot.carousel__dot--selected {
+  opacity: 1;
+}
+
+.carousel__dot-group {
+  display: flex;
+  justify-content: center;
+}
+
+.object-fit-contain {
+  object-fit: contain;
 }

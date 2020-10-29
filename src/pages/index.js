@@ -13,6 +13,10 @@ import { Shimmer } from "../components/Shimmer"
 import "sal.js/dist/sal.css"
 import "../index.css"
 
+// TODO: Add video shimmer
+// TODO: Add copy code button
+// TODO: Test mobile layout
+
 export default function Home() {
   useEffect(() => {
     sal()
@@ -27,8 +31,6 @@ export default function Home() {
       <Header />
 
       <Hero />
-
-      <MailingList />
 
       <Features />
 
