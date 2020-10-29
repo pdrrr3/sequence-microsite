@@ -52,11 +52,11 @@ export const Features = () => (
       {...fadeProps}
       className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-32"
     >
-      <div className="mt-6 flex-1">
+      <div className="mt-6 flex-1 w-full">
         <Carousel />
       </div>
 
-      <div className="flex-1 flex flex-col align-center justify-center mr-10 px-8">
+      <div className="flex-1 flex flex-col align-center justify-center mx-10 px-8">
         <h2>An Ethereum Web Wallet anyone can use</h2>
 
         <p className="mt-4 mb-12" style={{ maxWidth: 414 }}>
@@ -84,7 +84,7 @@ intent.capture`}
       {...fadeProps}
       className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-32"
     >
-      <div className="flex-1 flex flex-col align-center justify-center mr-10 px-8">
+      <div className="flex-1 flex flex-col align-center justify-center mx-10 px-8">
         <h2>
           Finally, friendly UX for blockchain
           <br />
