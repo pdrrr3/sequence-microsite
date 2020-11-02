@@ -110,6 +110,15 @@ code {
   line-height: 2;
   font-size: 12px;
   white-space: pre;
+  position: relative;
+}
+
+code .copy-code {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .button {

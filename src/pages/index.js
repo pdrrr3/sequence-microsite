@@ -4,17 +4,14 @@ import sal from "sal.js"
 import { Head } from "../components/Head"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
-import { MailingList } from "../components/MailingList"
 import { Hero } from "../components/Hero"
 import { Features } from "../components/Features"
 import { SkyweaverCallout } from "../components/SkyweaverCallout"
 import { ContactForm } from "../components/ContactForm"
-import { Shimmer } from "../components/Shimmer"
 import "sal.js/dist/sal.css"
 import "../index.css"
 
 // TODO: Add video shimmer
-// TODO: Add copy code button
 // TODO: Test mobile layout
 
 export default function Home() {
@@ -25,8 +22,6 @@ export default function Home() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Head />
-
-      {/* <Shimmer /> */}
 
       <Header />
 

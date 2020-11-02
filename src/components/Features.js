@@ -4,6 +4,7 @@ import slider1 from "../assets/slider1.png"
 import slider2 from "../assets/slider2.png"
 import slider3 from "../assets/slider3.png"
 import video from "../assets/motion1.mp4"
+import copyCode from "../assets/copy-code.png"
 import video2 from "../assets/motion2.mp4"
 import { fadeProps } from "../constants"
 
@@ -68,14 +69,12 @@ export const Features = () => (
         <h3>Integrate Sequence in four lines of code</h3>
 
         <code>
-          {`require 'stripe'
-intent = Stripe::PaymentIntent.retrieve(
-  'pi_1DgFnF2eZvKYlo2CRWIjRLcg',
-  {
-    stripe_version: '2020-08-27',
-  }
-)
-intent.capture`}
+          <img
+            onClick={() => navigator.clipboard.writeText(code)}
+            src={copyCode}
+            className="copy-code"
+          />
+          {code}
         </code>
       </div>
     </div>
@@ -144,3 +143,12 @@ intent.capture`}
     </div>
   </div>
 )
+
+const code = `require 'stripe'
+intent = Stripe::PaymentIntent.retrieve(
+  'pi_1DgFnF2eZvKYlo2CRWIjRLcg',
+  {
+    stripe_version: '2020-08-27',
+  }
+)
+intent.capture`

@@ -1,11 +1,8 @@
 import React from "react"
 import { Button } from "./Button"
-import { BottomShimmer } from "./Shimmer"
 
 export const ContactForm = () => (
   <div className="relative">
-    {/* <BottomShimmer /> */}
-
     <div id="contact" className="container text-center mt-20 pb-32 px-8">
       <div className="max-w-2xl mx-auto mb-16">
         <h2>Get a Demo</h2>
