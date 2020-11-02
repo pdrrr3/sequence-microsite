@@ -10,9 +10,10 @@ import { SkyweaverCallout } from "../components/SkyweaverCallout"
 import { ContactForm } from "../components/ContactForm"
 import "sal.js/dist/sal.css"
 import "../index.css"
+import shimmer from "../assets/shimmer.mp4"
 
-// TODO: Add video shimmer
 // TODO: Test mobile layout
+// TODO: grayscale footer mailing list
 
 export default function Home() {
   useEffect(() => {
@@ -22,6 +23,16 @@ export default function Home() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Head />
+
+      <video
+        autoPlay
+        muted
+        loop
+        className="flex-1"
+        style={{ position: "absolute", zIndex: -1 }}
+      >
+        <source src={shimmer} />
+      </video>
 
       <Header />
 
