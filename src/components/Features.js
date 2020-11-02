@@ -70,6 +70,7 @@ export const Features = () => (
 
         <code>
           <img
+            alt="copy-code"
             onClick={() => navigator.clipboard.writeText(code)}
             src={copyCode}
             className="copy-code"

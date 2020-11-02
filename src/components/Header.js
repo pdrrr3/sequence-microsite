@@ -1,6 +1,6 @@
 import React from "react"
 import { Button } from "./Button"
-import logoPng from "../assets/logo.png"
+import logoPng from "../assets/logo-color.png"
 
 export const Header = () => (
   <header className="flex flex-1 justify-between mt-16 sm:mt-0 py-10 max-w-6xl mx-auto px-4">

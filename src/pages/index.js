@@ -12,9 +12,6 @@ import "sal.js/dist/sal.css"
 import "../index.css"
 import shimmer from "../assets/shimmer.mp4"
 
-// TODO: Test mobile layout
-// TODO: grayscale footer mailing list
-
 export default function Home() {
   useEffect(() => {
     sal()
@@ -29,7 +26,7 @@ export default function Home() {
         muted
         loop
         className="flex-1"
-        style={{ position: "absolute", zIndex: -1 }}
+        style={{ position: "absolute", zIndex: -1, opacity: 0.5 }}
       >
         <source src={shimmer} />
       </video>

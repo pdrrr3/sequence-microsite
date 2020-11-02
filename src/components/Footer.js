@@ -1,5 +1,5 @@
 import React from "react"
-import logoPng from "../assets/logo-color.png"
+import logoPng from "../assets/logo.png"
 import footerPng from "../assets/footer.png"
 import { MailingListInput } from "./MailingList"
 
@@ -15,7 +15,7 @@ export const Footer = () => (
             style={{ height: 40 }}
           />
 
-          <MailingListInput small />
+          <MailingListInput grayscale small />
 
           <p className="mt-4 mb-12" style={{ fontSize: 16, opacity: 0.6 }}>
             Stay up to date with our latest news and announcements
