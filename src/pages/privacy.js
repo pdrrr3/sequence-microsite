@@ -11,10 +11,10 @@ export default function Privacy() {
         <Head />
 
         <Header />
-        <div className="max-w-4xl mx-auto my-32">
+        <div className="max-w-4xl mx-auto">
           <h1 className="mb-8">Privacy</h1>
 
-          <p className="mb-12">
+          <p className="mb-10">
             These terms govern your use of the SkyWeaver video game and the
             Arcadeum platform that powers SkyWeaver, including related
             trademarks, software code, and other intellectual property (all
@@ -33,7 +33,7 @@ export default function Privacy() {
 
           <h4>Trial Product</h4>
 
-          <p className="mb-12">
+          <p className="mb-10">
             For the purposes of this trial, you acknowledge that the Arcadeum
             Gaming Platform will have limited functionality, is still under
             development by Horizon, may not be fully tested, and may contain
@@ -43,7 +43,7 @@ export default function Privacy() {
 
           <h4>Scope of Use</h4>
 
-          <p className="mb-12">
+          <p className="mb-10">
             Horizon grants to you, during the Term, a non-exclusive, non-
             transferable, limited license to use the software included with the
             Arcadeum Gaming Platform solely for the purpose of evaluating the
@@ -64,7 +64,7 @@ export default function Privacy() {
 
           <h4>Ownership</h4>
 
-          <p className="mb-12">
+          <p className="mb-10">
             All right, title and interest in the intellectual property embodied
             in the Arcadeum Gaming Platform, and any accompanying materials, are
             owned by Horizon or its suppliers and licensors and may be protected

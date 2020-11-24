@@ -6,7 +6,7 @@ import { MailingListInput } from "./MailingList"
 export const Footer = () => (
   <footer style={{ background: "#151515" }}>
     <div className="container px-8">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start flex-1 justify-between py-20">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start flex-1 justify-between pt-10">
         <div className="flex flex-col flex-1 items-center text-center lg:text-left max-w-sm lg:items-start">
           <img
             className="mb-5"
@@ -17,7 +17,7 @@ export const Footer = () => (
 
           <MailingListInput grayscale small />
 
-          <p className="mt-4 mb-12" style={{ fontSize: 16, opacity: 0.6 }}>
+          <p className="mt-4 mb-10" style={{ fontSize: 16, opacity: 0.6 }}>
             Stay up to date with our latest news and announcements
           </p>
         </div>
@@ -29,7 +29,7 @@ export const Footer = () => (
             <FooterLink href="https://www.google.ca">Docs</FooterLink>
           </div>
 
-          <div className="flex flex-col flex-1 items-end lg:m-0 mt-4 order-4 lg:order-2">
+          <div className="flex flex-col flex-1 items-end order-4 mt-4 lg:order-2 lg:m-0">
             <FooterLink href="https://www.google.ca">Github</FooterLink>
             <FooterLink href="https://www.google.ca">Twitter</FooterLink>
           </div>
@@ -42,13 +42,16 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col-reverse lg:flex-row items-center justify-between py-10 lg:pr-8">
-        <p className="my-2" style={{ fontSize: 16, opacity: 0.6 }}>
+      <div className="flex flex-1 flex-col-reverse lg:flex-row items-center justify-between pb-7 mt-4 lg:mt-0 lg:pr-8">
+        <p className="my-2" style={{ fontSize: 12, opacity: 0.6 }}>
           Copyright © {new Date().getFullYear()} Sequence
         </p>
 
         <a className="flex items-center" href="https://google.ca">
-          <p className="my-2 mr-4 hidden lg:block" style={{ opacity: 0.6 }}>
+          <p
+            className="my-2 mr-4 hidden lg:block"
+            style={{ fontSize: 12, opacity: 0.6 }}
+          >
             Built by
           </p>
           <img alt="logo" src={footerPng} style={{ height: 26 }} />

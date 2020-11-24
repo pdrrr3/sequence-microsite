@@ -5,16 +5,17 @@ import skyweaverBGPng from "../assets/skyweaverbg.png"
 import { fadeProps } from "../constants"
 
 export const SkyweaverCallout = () => (
-  <div className="relative text-white mb-20 pt-4 pb-6 md:pt-20 md:pb-32 md:text-center">
+  <div className="relative text-white px-4 py-10 mb-10 md:text-center lg:mx-8">
     <SkyweaverBackground />
 
     <div
       {...fadeProps}
-      className="mx-auto max-w-xl flex flex-col items-center py-12"
+      className="mx-auto max-w-xl flex flex-col items-center pt-9 pb-9"
     >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
-      <h3 className="text-white mt-4 mb-10">Powered by Sequence</h3>
-      <p className="text-white px-10">
+      <h3 className="text-white mt-4 mb-6">Powered by Sequence</h3>
+
+      <p className="text-white">
         The digital card game where players actually own, trade and sell their
         cards. By ranking highly on the competitive leaderboard, players win
         tradable items. With a built-in wallet and marketplace, players can
@@ -24,22 +25,14 @@ export const SkyweaverCallout = () => (
         SkyWeaver is pioneering community-owned economies in gaming, and it’s
         powered by Sequence.
       </p>
-      <Button solid className="mt-16 bg-white text-blue">
-        Visit Website
-      </Button>
     </div>
   </div>
 )
 
 const SkyweaverBackground = () => (
-  <div
-    className="absolute inset-0"
-    style={{
-      zIndex: -1,
-    }}
-  >
+  <div className="absolute inset-0" style={{ zIndex: -1 }}>
     <div
-      className="absolute inset-0"
+      className="absolute inset-0 rounded"
       style={{
         background:
           "linear-gradient(71.63deg, #AD64B9 7.95%, #9E64B9 35.94%, #6477B9 64.09%, #8CDCE1 97.81%)",
@@ -49,16 +42,13 @@ const SkyweaverBackground = () => (
       }}
     />
     <img
-      className="object-cover object-left md:object-center w-full h-full relative"
+      className="object-cover object-left md:object-center w-full h-full relative rounded"
       alt="skyweaverbg"
       src={skyweaverBGPng}
-      style={{
-        zIndex: 1,
-        mixBlendMode: "screen",
-      }}
+      style={{ zIndex: 1, mixBlendMode: "screen" }}
     />
     <div
-      className="absolute inset-0"
+      className="absolute inset-0 rounded"
       style={{
         background:
           "linear-gradient(76.42deg, rgba(40, 161, 211, 0) 20.86%, rgba(34, 201, 191, 0.75) 88.57%), #342ABC",

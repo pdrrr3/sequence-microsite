@@ -3,13 +3,13 @@ import { fadeProps } from "../constants"
 
 export const MailingList = () => (
   <div
-    className="max-w-2xl mx-auto rounded py-20 px-6 lg:px-24 mb-48 shadow"
+    className="max-w-2xl mx-auto rounded shadow"
     style={{ marginTop: 350 }}
     {...fadeProps}
   >
     <form>
       <div className="flex flex-col items-center text-center sm: text-left">
-        <h3 className="px-12 mb-6">Sign up for early updates</h3>
+        <h3>Sign up for early updates</h3>
 
         <MailingListInput />
       </div>
@@ -19,7 +19,7 @@ export const MailingList = () => (
 
 export const MailingListInput = ({ grayscale, small, className }) => (
   <div
-    className={`self-stretch rounded-full mt-4 flex overflow-hidden ${className}`}
+    className={`self-stretch rounded-full flex overflow-hidden ${className}`}
     style={{
       height: small ? 50 : 60,
       borderRadius: "8px 32px 32px 8px",
@@ -30,10 +30,10 @@ export const MailingListInput = ({ grayscale, small, className }) => (
   >
     <input
       placeholder="Sign up for early updates"
-      className="w-full bg-transparent pl-6 outline-none text-white"
+      className="w-full bg-transparent outline-none text-white"
     />
     <button
-      className="block rounded-full px-12 bg-medium-gray text-medium-gray relative gradient-shift"
+      className="button block rounded-full bg-medium-gray text-medium-gray relative gradient-shift"
       style={
         grayscale
           ? { background: "#404040" }

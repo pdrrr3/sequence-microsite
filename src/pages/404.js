@@ -9,7 +9,7 @@ export default function Home() {
     <div style={{ overflowX: "hidden" }}>
       <Head />
       <Header />
-      <div className="container text-center my-64">
+      <div className="container text-center">
         <h2>404</h2>
         <p>Not found</p>
       </div>
