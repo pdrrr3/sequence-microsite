@@ -17,7 +17,7 @@ const IMAGES = [
 
 export const Hero = () => (
   <>
-    <div className="container pt-10 pb-10 mx-4 mt-7 mb-10">
+    <div className="container pt-10 pb-10 mx-auto mt-7 mb-10">
       <div
         {...fadeProps}
         className="mx-auto flex flex-col justify-center text-center"

@@ -26,7 +26,12 @@ export default function Home() {
         muted
         loop
         className="flex-1"
-        style={{ position: "absolute", zIndex: -1, opacity: 0.5 }}
+        style={{
+          position: "absolute",
+          zIndex: -1,
+          opacity: 0.5,
+          width: "100vw",
+        }}
       >
         <source src={shimmer} />
       </video>

@@ -31,29 +31,11 @@ export const SkyweaverCallout = () => (
 
 const SkyweaverBackground = () => (
   <div className="absolute inset-0" style={{ zIndex: -1 }}>
-    <div
-      className="absolute inset-0 rounded"
-      style={{
-        background:
-          "linear-gradient(71.63deg, #AD64B9 7.95%, #9E64B9 35.94%, #6477B9 64.09%, #8CDCE1 97.81%)",
-        mixBlendMode: "multiply",
-        zIndex: 2,
-        opacity: 0.5,
-      }}
-    />
     <img
       className="object-cover object-left md:object-center w-full h-full relative rounded"
       alt="skyweaverbg"
       src={skyweaverBGPng}
-      style={{ zIndex: 1, mixBlendMode: "screen" }}
-    />
-    <div
-      className="absolute inset-0 rounded"
-      style={{
-        background:
-          "linear-gradient(76.42deg, rgba(40, 161, 211, 0) 20.86%, rgba(34, 201, 191, 0.75) 88.57%), #342ABC",
-        zIndex: 0,
-      }}
+      style={{ zIndex: 1 }}
     />
   </div>
 )
