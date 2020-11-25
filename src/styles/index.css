@@ -22,3 +22,9 @@ body {
   min-width: 80px;
   max-width: 300px;
 }
+
+@media (min-width: 640px) {
+  .button {
+    min-width: 130px;
+  }
+}
