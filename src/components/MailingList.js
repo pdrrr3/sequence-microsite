@@ -1,21 +1,4 @@
 import React from "react"
-import { fadeProps } from "../constants"
-
-export const MailingList = () => (
-  <div
-    className="max-w-2xl mx-auto rounded shadow"
-    style={{ marginTop: 350 }}
-    {...fadeProps}
-  >
-    <form>
-      <div className="flex flex-col items-center text-center sm: text-left">
-        <h3>Sign up for early updates</h3>
-
-        <MailingListInput />
-      </div>
-    </form>
-  </div>
-)
 
 export const MailingListInput = ({ grayscale, small, className }) => (
   <div
@@ -29,8 +12,9 @@ export const MailingListInput = ({ grayscale, small, className }) => (
     }}
   >
     <input
-      placeholder="Sign up for early updates"
+      placeholder="Get early access and updates"
       className="w-full bg-transparent outline-none text-white"
+      style={{ minWidth: 250 }}
     />
     <button
       className="button block rounded-full bg-medium-gray text-medium-gray relative gradient-shift"

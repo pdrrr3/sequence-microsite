@@ -1,19 +1,18 @@
 import React from "react"
-import { Button } from "../components/Button"
-import skyweaverPng from "../assets/skyweaver.png"
+import skyweaverPng from "../assets/skyweaver-logo.png"
 import skyweaverBGPng from "../assets/skyweaverbg.png"
-import { fadeProps } from "../constants"
+import { SAL_PROPS } from "../constants"
 
 export const SkyweaverCallout = () => (
-  <div className="relative text-white px-4 py-10 mb-10 md:text-center lg:mx-8">
+  <div className="relative text-white px-4 py-10 mx-2 mb-10 md:text-center md:mx-4 lg:mx-8">
     <SkyweaverBackground />
 
     <div
-      {...fadeProps}
-      className="mx-auto max-w-xl flex flex-col items-center pt-9 pb-9"
+      {...SAL_PROPS}
+      className="mx-auto max-w-xl flex flex-col items-center px-2 py-11"
     >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
-      <h3 className="text-white mt-4 mb-6">Powered by Sequence</h3>
+      <h3 className="text-white mt-5 mb-7">Powered by Sequence</h3>
 
       <p className="text-white">
         The digital card game where players actually own, trade and sell their

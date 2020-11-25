@@ -1,29 +1,18 @@
 import React from "react"
-import { fadeProps } from "../constants"
+import { HERO_IMAGE_POSITIONS, SAL_PROPS, HERO_IMAGES } from "../constants"
 import { MailingListInput } from "./MailingList"
-import headerLogo1 from "../assets/hero/1.png"
-import headerLogo2 from "../assets/hero/2.png"
-import headerLogo3 from "../assets/hero/3.png"
-import headerLogo4 from "../assets/hero/4.png"
-import headerLogo5 from "../assets/hero/5.png"
-
-const IMAGES = [
-  { src: headerLogo4, size: 260, top: -100, left: -50 },
-  { src: headerLogo2, size: 320, top: -180, left: 180 },
-  { src: headerLogo5, size: 320, top: 105, left: -20 },
-  { src: headerLogo1, size: 400, top: 50, left: 270 },
-  { src: headerLogo3, size: 240, top: 350, left: 200 },
-]
+import ethLogo from "../assets/hero/eth.png"
+import linkImg from "../assets/link.png"
 
 export const Hero = () => (
   <>
-    <div className="container pt-10 pb-10 mx-auto mt-7 mb-10">
+    <div className="container px-4 py-10 mx-auto mt-7 mb-10">
       <div
-        {...fadeProps}
+        {...SAL_PROPS}
         className="mx-auto flex flex-col justify-center text-center"
         style={{ maxWidth: 700 }}
       >
-        <h1 className="mb-4">
+        <h1 className="mt-2 mb-4">
           A seamless user and developer experience for Ethereum
         </h1>
 
@@ -36,59 +25,85 @@ export const Hero = () => (
       </div>
     </div>
 
-    <div className="container pb-10 mb-6">
+    <div className="container px-2 pb-10 mb-6 md:px-4">
       <div className="relative">
-        <div
-          className="flex flex-col bg-blue rounded shadow p-9 mx-auto md:flex-row"
-          style={{
-            maxWidth: 1200,
-            background:
-              "linear-gradient(0deg, rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), linear-gradient(222.39deg, rgba(174, 38, 145, 0) 68.93%, #AB4294 115.85%), linear-gradient(61.57deg, rgba(30, 118, 154, 0) 19.77%, #56C6CD 85.93%), linear-gradient(0deg, #342ABC, #342ABC)",
-          }}
-        >
-          <div className="flex-1 box-border lg:pr-9">
-            <h2 className="text-white mb-5">
-              Enter the next generation of Internet economies
-            </h2>
+        <div className="hero-blue-container flex flex-col bg-blue rounded shadow px-6 py-9 mx-auto lg:flex-row lg:px-9">
+          <div className="flex-1 box-border flex flex-col justify-between lg:pr-9">
+            <div>
+              <h2 className="text-white mb-5">
+                Enter the next generation of Internet economies
+              </h2>
 
-            <p className="text-light-gray">
-              From digital collectibles to video game items and virtual real
-              estate, digital worlds are becoming more real and valuable than
-              ever before.
-            </p>
+              <p className="text-light-gray">
+                From digital collectibles to video game items and virtual real
+                estate, digital worlds are becoming more real and valuable than
+                ever before.
+              </p>
 
-            <br />
+              <br />
 
-            <p className="text-light-gray">
-              Sequence is your gateway to access and build in this new
-              dimension.
-            </p>
+              <p className="text-light-gray">
+                Sequence is your gateway to access and build in this new
+                dimension.
+              </p>
+            </div>
 
-            <div className="my-10" />
-
-            <p className="text-white" style={{ fontSize: 16, fontWeight: 300 }}>
-              Compatible with everything on Ethereum
-            </p>
+            <div className="flex items-center mt-5">
+              <img
+                className="mr-4"
+                alt="etherium"
+                src={ethLogo}
+                style={{ height: 28 }}
+              />
+              <p
+                className="text-white"
+                style={{ fontSize: 16, fontWeight: 500 }}
+              >
+                Compatible with everything on Ethereum
+              </p>
+            </div>
           </div>
 
-          <div className="flex-1">
-            <div className="relative hidden lg:block">
-              {IMAGES.map(({ size, src, ...style }) => (
-                <img
-                  alt="logo"
-                  src={src}
-                  style={{
-                    position: "absolute",
-                    width: size,
-                    height: size,
-                    ...style,
-                  }}
-                />
-              ))}
-            </div>
+          <div className="flex-1 relative hero-logo-container">
+            {HERO_IMAGE_POSITIONS.map((positionProps, index) => (
+              <HeroLogo
+                key={index}
+                {...positionProps}
+                {...HERO_IMAGES[index]}
+              />
+            ))}
           </div>
         </div>
       </div>
     </div>
   </>
+)
+
+const HeroLogo = props => (
+  <div
+    className="hero-logo absolute pointer"
+    style={{ width: props.size, height: props.size, ...props }}
+  >
+    <a
+      className="flex justify-center items-end absolute h-full w-full"
+      target="_blank"
+      rel="noreferrer"
+      style={{ opacity: 1 }}
+      href={props.href}
+    >
+      <img
+        alt="logo"
+        className="object-fit-contain absolute"
+        src={props.src}
+        style={{ width: "100%", height: "100%" }}
+      />
+      <div
+        className="link mb-6 flex items-center text-center color-white"
+        style={{ zIndex: 3 }}
+      >
+        {props.label}
+        <img alt="link" className="ml-2" src={linkImg} style={{ height: 20 }} />
+      </div>
+    </a>
+  </div>
 )

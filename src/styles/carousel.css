@@ -1,0 +1,17 @@
+.carousel__dot {
+  background-color: white;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+  border-radius: 5px;
+}
+
+.carousel__dot.carousel__dot--selected {
+  opacity: 1;
+}
+
+.carousel__dot-group {
+  display: flex;
+  justify-content: center;
+}

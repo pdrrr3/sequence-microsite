@@ -31,6 +31,7 @@ module.exports = {
       8: "64px",
       9: "75px",
       10: "100px",
+      11: "130px",
     },
   },
   variants: {},

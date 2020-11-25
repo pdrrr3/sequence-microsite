@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "./Button"
 
 export const ContactForm = () => (
-  <div className="relative pt-8 pb-10 mb-10">
+  <div className="relative px-2 pt-8 pb-10 mb-10 md:px-4">
     <div id="contact" className="container text-center">
       <div className="max-w-2xl mx-auto mb-8">
         <h2 className="mb-4">Get a Demo</h2>
@@ -18,6 +18,8 @@ export const ContactForm = () => (
           e.preventDefault()
           if (e && e.target) {
             const data = new FormData(e.target)
+
+            // TODO: Need somewhere to submit this data
             console.log(Object.fromEntries(data.entries()))
           }
         }}
