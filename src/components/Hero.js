@@ -106,7 +106,10 @@ const HeroLogo = props => {
         className="flex justify-center items-end absolute h-full w-full"
         target="_blank"
         rel="noreferrer"
-        style={{ opacity: 1 }}
+        style={{
+          opacity: 1,
+          filter: "drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.2))",
+        }}
         href={props.images[index].href}
       >
         <CrossfadeImage
