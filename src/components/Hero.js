@@ -1,8 +1,15 @@
-import React from "react"
-import { HERO_IMAGE_POSITIONS, SAL_PROPS, HERO_IMAGES } from "../constants"
+import React, { useEffect, useState } from "react"
+import {
+  HERO_IMAGE_POSITIONS,
+  SAL_PROPS,
+  HERO_IMAGES,
+  HERO_IMAGE_SWAP_DURATION,
+  HERO_IMAGE_SWAP_DELAY,
+} from "../constants"
 import { MailingListInput } from "./MailingList"
 import ethLogo from "../assets/hero/eth.png"
 import linkImg from "../assets/link.png"
+import { CrossfadeImage } from "./CrossFadeImage"
 
 export const Hero = () => (
   <>
@@ -68,8 +75,9 @@ export const Hero = () => (
             {HERO_IMAGE_POSITIONS.map((positionProps, index) => (
               <HeroLogo
                 key={index}
+                index={index}
                 {...positionProps}
-                {...HERO_IMAGES[index]}
+                images={HERO_IMAGES[index]}
               />
             ))}
           </div>
@@ -79,31 +87,48 @@ export const Hero = () => (
   </>
 )
 
-const HeroLogo = props => (
-  <div
-    className="hero-logo absolute pointer"
-    style={{ width: props.size, height: props.size, ...props }}
-  >
-    <a
-      className="flex justify-center items-end absolute h-full w-full"
-      target="_blank"
-      rel="noreferrer"
-      style={{ opacity: 1 }}
-      href={props.href}
+const HeroLogo = props => {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setIndex(i => (i >= props.images.length - 1 ? 0 : i + 1))
+    }, HERO_IMAGE_SWAP_DURATION)
+    return () => clearInterval(interval)
+  }, [props.images.length])
+
+  return (
+    <div
+      className="hero-logo absolute pointer"
+      style={{ width: props.size, height: props.size, ...props }}
     >
-      <img
-        alt="logo"
-        className="object-fit-contain absolute"
-        src={props.src}
-        style={{ width: "100%", height: "100%" }}
-      />
-      <div
-        className="link mb-6 flex items-center text-center color-white"
-        style={{ zIndex: 3 }}
+      <a
+        className="flex justify-center items-end absolute h-full w-full"
+        target="_blank"
+        rel="noreferrer"
+        style={{ opacity: 1 }}
+        href={props.images[index].href}
       >
-        {props.label}
-        <img alt="link" className="ml-2" src={linkImg} style={{ height: 20 }} />
-      </div>
-    </a>
-  </div>
-)
+        <CrossfadeImage
+          alt="logo"
+          delay={props.index * HERO_IMAGE_SWAP_DELAY}
+          className="object-fit-contain absolute w-full h-full"
+          src={props.images[index].src}
+          style={{ width: "100%", height: "100%" }}
+        />
+        <div
+          className="link mb-6 flex items-center text-center color-white"
+          style={{ zIndex: 3 }}
+        >
+          {props.images[index].label}
+          <img
+            alt="link"
+            className="ml-2"
+            src={linkImg}
+            style={{ height: 20 }}
+          />
+        </div>
+      </a>
+    </div>
+  )
+}
