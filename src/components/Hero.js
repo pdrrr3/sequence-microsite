@@ -9,7 +9,7 @@ import {
 import { MailingListInput } from "./MailingList"
 import ethLogo from "../assets/hero/eth.png"
 import linkImg from "../assets/link.png"
-import { CrossfadeImage } from "./CrossFadeImage"
+import { CrossfadeImage } from "./CrossfadeImage"
 
 export const Hero = () => (
   <>
