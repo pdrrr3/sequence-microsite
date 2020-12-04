@@ -32,7 +32,7 @@ intent = Stripe::PaymentIntent.retrieve(
 )
 intent.capture`
 
-export const HERO_IMAGE_SWAP_DURATION = 8000
+export const HERO_IMAGE_SWAP_DURATION = 4000
 export const HERO_IMAGE_SWAP_DELAY = 50
 
 export const HERO_IMAGE_POSITIONS = [

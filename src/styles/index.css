@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .animated-boxes {
+    @apply absolute inset-0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 body {
   background-color: #000;
@@ -23,8 +31,132 @@ body {
   max-width: 300px;
 }
 
+.animated-boxes {
+  position: relative;
+  min-height: 600px;
+}
+
+.animated-boxes svg {
+  position: absolute;
+}
+
+.animated-boxes .box-2 {
+  opacity: 0;
+  z-index: 2;
+  animation-name: box-2;
+  animation-duration: 10s;
+}
+
+.animated-boxes .box-3 {
+  opacity: 0;
+  z-index: 3;
+  animation-name: box-3;
+  animation-duration: 10s;
+}
+
+.animated-boxes .box-4 {
+  z-index: 4;
+  animation-name: box-4;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+}
+
+@media (max-width: 700px) {
+  .animated-boxes {
+    width: 400px;
+    transform: scale(0.7);
+  }
+}
+
+@media (min-width: 700px) {
+  .animated-boxes {
+    width: 400px;
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 1200px) {
+  .animated-boxes {
+    width: 400px;
+    transform: scale(1);
+  }
+}
+
 @media (min-width: 640px) {
   .button {
     min-width: 130px;
+  }
+}
+
+@keyframes box-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-200px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes box-3 {
+  25% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-200px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes box-4 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }

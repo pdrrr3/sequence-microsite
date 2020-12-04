@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export const CrossfadeImage = ({
   src,
   style,
   alt,
-  duration = 600,
+  duration = 1000,
   delay = 0,
   className = "CrossfadeImage",
 }) => {
@@ -31,7 +31,7 @@ export const CrossfadeImage = ({
       setTopOpacity(1)
       setBottomOpacity(0)
     }
-  }, [src])
+  }, [src, bottomOpacity, duration, topOpacity, topSrc, bottomSrc])
 
   return (
     <div className={className}>
@@ -56,6 +56,7 @@ export const CrossfadeImage = ({
             transition: `opacity ${duration}ms ${delay}ms`,
           }}
           src={bottomSrc}
+          alt={alt}
         />
       )}
     </div>

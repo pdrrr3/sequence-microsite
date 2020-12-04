@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
-import video from "../assets/motion1.mp4"
 import copyCode from "../assets/copy-code.png"
 import { SAL_PROPS, INTEGRATION_CODE } from "../constants"
 import { Button } from "./Button"
 import slider1 from "../assets/slider1.png"
 import slider2 from "../assets/slider2.png"
 import slider3 from "../assets/slider3.png"
+import * as AnimatedBoxes from "./AnimatedBoxes"
 
 export const Features = () => {
   const [showCode, setShowCode] = useState(true)
@@ -22,18 +22,16 @@ export const Features = () => {
     <div className="relative mx-5">
       <div
         {...SAL_PROPS}
-        className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto mb-10 pb-10 lg:px-7"
+        className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-10 pb-10 lg:px-5"
       >
-        <div className="flex-1 w-full flex flex-col align-center justify-center">
-          <h2>
-            Finally, friendly UX for blockchain
-            <div className="my-4" />
-            Easy for developers too
+        <div className="flex-1 w-full flex flex-col align-center justify-center lg:mr-10">
+          <h2 style={{ maxWidth: 550 }}>
+            Finally, a friendly experience for blockchain
           </h2>
 
           <div className="my-4" />
 
-          <p style={{ maxWidth: 414 }}>
+          <p>
             Sequence gives you a friendly smart wallet, an end-to-end SDK to
             integrate Ethereum with your web application, and powerful APIs for
             the security you need.
@@ -44,10 +42,11 @@ export const Features = () => {
           </p>
         </div>
 
-        <div className="flex-1">
-          <video autoPlay muted loop alt="features" width={530}>
-            <source src={video} />
-          </video>
+        <div className="animated-boxes">
+          <AnimatedBoxes.Box1 />
+          <AnimatedBoxes.Box2 />
+          <AnimatedBoxes.Box3 />
+          <AnimatedBoxes.Box4 />
         </div>
       </div>
 
