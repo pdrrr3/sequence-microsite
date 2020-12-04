@@ -62,10 +62,7 @@ export const Hero = () => (
                 src={ethLogo}
                 style={{ height: 28 }}
               />
-              <p
-                className="text-white"
-                style={{ fontSize: 16, fontWeight: 500 }}
-              >
+              <p className="text-white text-bold">
                 Compatible with everything on Ethereum
               </p>
             </div>

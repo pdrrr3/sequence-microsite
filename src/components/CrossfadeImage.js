@@ -37,26 +37,26 @@ export const CrossfadeImage = ({
     <div className={className}>
       {topSrc && (
         <img
+          className="absolute"
+          src={topSrc}
+          alt={alt}
           style={{
             ...style,
-            position: "absolute",
             opacity: topOpacity,
             transition: `opacity ${duration}ms ease ${delay}ms`,
           }}
-          src={topSrc}
-          alt={alt}
         />
       )}
       {bottomSrc && (
         <img
+          className="absolute"
+          src={bottomSrc}
+          alt={alt}
           style={{
             ...style,
-            position: "absolute",
             opacity: bottomOpacity,
             transition: `opacity ${duration}ms ${delay}ms`,
           }}
-          src={bottomSrc}
-          alt={alt}
         />
       )}
     </div>

@@ -1,14 +1,11 @@
 import React, { useState } from "react"
-import { CarouselProvider, Slider, Slide, DotGroup } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import copyCode from "../assets/copy-code.png"
 import { SAL_PROPS, INTEGRATION_CODE } from "../constants"
 import { Button } from "./Button"
-import slider1 from "../assets/slider1.png"
-import slider2 from "../assets/slider2.png"
-import slider3 from "../assets/slider3.png"
 import * as AnimatedBoxes from "./AnimatedBoxes"
+import { Carousel } from "./Carousel"
 
 export const Features = () => {
   const [showCode, setShowCode] = useState(true)
@@ -76,7 +73,7 @@ export const Features = () => {
 
           <h3>Integrate Sequence in four lines of code</h3>
 
-          <code className="mt-6" style={{ minHeight: 250 }}>
+          <code className="mt-6">
             {/* eslint-disable-next-line */}
             <img
               alt="copy-code"
@@ -115,39 +112,3 @@ export const Features = () => {
     </div>
   )
 }
-
-const Carousel = () => (
-  <CarouselProvider
-    isPlaying
-    naturalSlideWidth={100}
-    naturalSlideHeight={125}
-    totalSlides={3}
-  >
-    <Slider>
-      <Slide index={0}>
-        <img
-          alt="features"
-          className="rounded w-full h-full object-fit-contain"
-          src={slider1}
-        />
-      </Slide>
-      <Slide index={1}>
-        <img
-          alt="features"
-          className="rounded w-full h-full object-fit-contain"
-          src={slider2}
-        />
-      </Slide>
-      <Slide index={2}>
-        <img
-          alt="features"
-          className="rounded w-full h-full object-fit-contain"
-          src={slider3}
-        />
-      </Slide>
-    </Slider>
-    <div className="mt-6">
-      <DotGroup />
-    </div>
-  </CarouselProvider>
-)

@@ -16,6 +16,7 @@ body {
 }
 
 .button {
+  min-width: 200px;
   background-image: linear-gradient(
       83.57deg,
       rgba(0, 0, 0, 0) 13.55%,
@@ -29,6 +30,14 @@ body {
     linear-gradient(0deg, #2a2a2a, #2a2a2a);
   min-width: 80px;
   max-width: 300px;
+}
+
+.button.small {
+  min-width: 140px;
+}
+
+.button span {
+  z-index: 1;
 }
 
 .animated-boxes {
@@ -159,4 +168,27 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+footer {
+  background: #151515;
+}
+
+footer a {
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.note {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+code {
+  min-width: 250px;
+}
+
+.text-bold {
+  font-size: 16px;
+  font-weight: 500;
 }
