@@ -49,25 +49,35 @@ body {
   position: absolute;
 }
 
-.animated-boxes .box-2 {
+.animated-boxes .box-2,
+.animated-boxes .box-3,
+.animated-boxes .box-4 {
   opacity: 0;
-  z-index: 2;
-  animation-name: box-2;
   animation-duration: 10s;
 }
 
-.animated-boxes .box-3 {
-  opacity: 0;
+.animated-boxes .box-2 {
   z-index: 3;
-  animation-name: box-3;
-  animation-duration: 10s;
+}
+
+.animated-boxes .box-3 {
+  z-index: 3;
 }
 
 .animated-boxes .box-4 {
   z-index: 4;
+}
+
+.animated-boxes.active .box-2 {
+  animation-name: box-2;
+}
+
+.animated-boxes.active .box-3 {
+  animation-name: box-3;
+}
+
+.animated-boxes.active .box-4 {
   animation-name: box-4;
-  animation-duration: 10s;
-  animation-timing-function: ease-out;
 }
 
 @media (max-width: 700px) {

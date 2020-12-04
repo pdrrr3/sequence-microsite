@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { createRef, useEffect, useState } from "react"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import copyCode from "../assets/copy-code.png"
@@ -6,6 +6,7 @@ import { SAL_PROPS, INTEGRATION_CODE } from "../constants"
 import { Button } from "./Button"
 import * as AnimatedBoxes from "./AnimatedBoxes"
 import { Carousel } from "./Carousel"
+import throttle from "lodash.throttle"
 
 export const Features = () => {
   const [showCode, setShowCode] = useState(true)
@@ -14,6 +15,8 @@ export const Features = () => {
     setTimeout(() => setShowCode(true), 2000)
     navigator.clipboard.writeText(INTEGRATION_CODE)
   }
+
+  const [isVisible, currentElement] = useVisibility(0)
 
   return (
     <div className="relative mx-5">
@@ -39,7 +42,10 @@ export const Features = () => {
           </p>
         </div>
 
-        <div className="animated-boxes">
+        <div
+          ref={currentElement}
+          className={`animated-boxes ${isVisible ? "active" : ""}`}
+        >
           <AnimatedBoxes.Box1 />
           <AnimatedBoxes.Box2 />
           <AnimatedBoxes.Box3 />
@@ -111,4 +117,25 @@ export const Features = () => {
       </div>
     </div>
   )
+}
+
+function useVisibility() {
+  const [isVisible, setIsVisible] = useState(false)
+  const currentElement = createRef()
+
+  const onScroll = throttle(() => {
+    if (!currentElement.current) {
+      setIsVisible(false)
+      return
+    }
+    const top = currentElement.current.getBoundingClientRect().top
+    setIsVisible(top <= window.innerHeight - 400)
+  }, 100)
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  })
+
+  return [isVisible, currentElement]
 }
