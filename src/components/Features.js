@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import copyCode from "../assets/copy-code.png"
+import featuresPng from "../assets/features.png"
 import { SAL_PROPS, INTEGRATION_CODE } from "../constants"
 import { Button } from "./Button"
 import { AnimatedBoxes } from "./AnimatedBoxes"
@@ -94,6 +95,10 @@ export const Features = () => {
             And they give you everything you’ll need to run your application
             beautifully on the blockchain.
           </p>
+
+          <div className="mt-10 mx-auto" style={{ maxWidth: 1000 }}>
+            <img alt="features" className="object-fit" src={featuresPng} />
+          </div>
         </div>
       </div>
 
