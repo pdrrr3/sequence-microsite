@@ -25,7 +25,7 @@
 .animated-boxes .box,
 .animated-boxes .box .box-text {
   animation-duration: 8s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
   animation-fill-mode: forwards;
   animation-direction: alternate;
   animation-play-state: paused;
