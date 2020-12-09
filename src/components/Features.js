@@ -1,34 +1,20 @@
-import React, { createRef, useEffect, useRef, useState } from "react"
+import React, { useState } from "react"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import copyCode from "../assets/copy-code.png"
 import { SAL_PROPS, INTEGRATION_CODE } from "../constants"
 import { Button } from "./Button"
-import * as AnimatedBoxes from "./AnimatedBoxes"
+import { AnimatedBoxes } from "./AnimatedBoxes"
 import { Carousel } from "./Carousel"
-import throttle from "lodash.throttle"
 
 export const Features = () => {
-  const iterationRef = useRef(0)
   const [showCode, setShowCode] = useState(true)
-  const [isVisible, currentElement] = useVisibility(0)
-  const [isPlaying, setIsPlaying] = useState(true)
 
   const clickCopyCode = () => {
     setShowCode(false)
     setTimeout(() => setShowCode(true), 2000)
     navigator.clipboard.writeText(INTEGRATION_CODE)
   }
-
-  useEffect(() => {
-    const animated = document.querySelector(".animated-boxes .box-2")
-    animated.addEventListener("animationiteration", () => {
-      iterationRef.current++
-      if (iterationRef.current % 2 === 1) {
-        setIsPlaying(false)
-      }
-    })
-  }, [])
 
   return (
     <div className="relative mx-5">
@@ -53,19 +39,7 @@ export const Features = () => {
             background.
           </p>
         </div>
-
-        <div
-          ref={currentElement}
-          role="presentation"
-          className={`animated-boxes ${isPlaying && isVisible ? "active" : ""}`}
-          onMouseEnter={() => setIsPlaying(true)}
-          onClick={() => setIsPlaying(true)}
-        >
-          <AnimatedBoxes.Box1 />
-          <AnimatedBoxes.Box2 />
-          <AnimatedBoxes.Box3 />
-          <AnimatedBoxes.Box4 />
-        </div>
+        <AnimatedBoxes />
       </div>
 
       <div className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto mb-10 pb-10">
@@ -132,25 +106,4 @@ export const Features = () => {
       </div>
     </div>
   )
-}
-
-function useVisibility() {
-  const [isVisible, setIsVisible] = useState(false)
-  const currentElement = createRef()
-
-  const onScroll = throttle(() => {
-    if (!currentElement.current) {
-      setIsVisible(false)
-      return
-    }
-    const top = currentElement.current.getBoundingClientRect().top
-    setIsVisible(top <= window.innerHeight - 400)
-  }, 100)
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  })
-
-  return [isVisible, currentElement]
 }
