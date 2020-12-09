@@ -89,7 +89,7 @@
 @media (max-width: 700px) {
   .animated-boxes {
     width: 400px;
-    left: 50px;
+    left: 30px;
     transform: scale(0.5);
   }
 }
