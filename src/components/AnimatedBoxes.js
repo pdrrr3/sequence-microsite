@@ -132,49 +132,49 @@ export const Box4 = () => (
       />
     </g>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0.479202 127.029V269.861H220.501V127.029H0.479202ZM220.501 396.891V269.861H0.478516L220.501 396.891Z"
       fill="#050047"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0.479202 127.029V269.861H220.501V127.029H0.479202ZM220.501 396.891V269.861H0.478516L220.501 396.891Z"
       fill="url(#paint0_linear)"
-      fill-opacity="0.7"
+      fillOpacity="0.7"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0.479202 127.029V269.861H220.501V127.029H0.479202ZM220.501 396.891V269.861H0.478516L220.501 396.891Z"
       fill="url(#paint1_linear)"
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M440.523 127.029V269.861H220.501V127.029H440.523ZM220.5 396.891V269.861H440.522L220.5 396.891Z"
       fill="#342ABC"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M440.523 127.029V269.861H220.501V127.029H440.523ZM220.5 396.891V269.861H440.522L220.5 396.891Z"
       fill="url(#paint2_linear)"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M440.523 127.029V269.861H220.501V127.029H440.523ZM220.5 396.891V269.861H440.522L220.5 396.891Z"
       fill="url(#paint3_linear)"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M440.523 127.029V269.861H220.501V127.029H440.523ZM220.5 396.891V269.861H440.522L220.5 396.891Z"
       fill="white"
-      fill-opacity="0.1"
+      fillOpacity="0.1"
     />
     <path
       d="M0.478516 127.029L220.501 0L440.523 127.029L220.501 254.059L0.478516 127.029Z"
@@ -183,12 +183,12 @@ export const Box4 = () => (
     <path
       d="M0.478516 127.029L220.501 0L440.523 127.029L220.501 254.059L0.478516 127.029Z"
       fill="url(#paint4_linear)"
-      fill-opacity="0.7"
+      fillOpacity="0.7"
     />
     <path
       d="M0.478516 127.029L220.501 0L440.523 127.029L220.501 254.059L0.478516 127.029Z"
       fill="url(#paint5_linear)"
-      fill-opacity="0.8"
+      fillOpacity="0.8"
     />
     <defs>
       <linearGradient
@@ -199,8 +199,8 @@ export const Box4 = () => (
         y2="439.933"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#56C6CD" />
-        <stop offset="1" stop-color="#076186" stop-opacity="0" />
+        <stop stopColor="#56C6CD" />
+        <stop offset="1" stopColor="#076186" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint1_linear"
@@ -210,8 +210,8 @@ export const Box4 = () => (
         y2="192.32"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AB4294" />
-        <stop offset="1" stop-color="#AE2691" stop-opacity="0" />
+        <stop stopColor="#AB4294" />
+        <stop offset="1" stopColor="#AE2691" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear"
@@ -221,8 +221,8 @@ export const Box4 = () => (
         y2="389.908"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#1E769A" stop-opacity="0" />
-        <stop offset="1" stop-color="#56C6CD" />
+        <stop stopColor="#1E769A" stopOpacity="0" />
+        <stop offset="1" stopColor="#56C6CD" />
       </linearGradient>
       <linearGradient
         id="paint3_linear"
@@ -232,8 +232,8 @@ export const Box4 = () => (
         y2="381.662"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AE2691" stop-opacity="0" />
-        <stop offset="1" stop-color="#AB4294" />
+        <stop stopColor="#AE2691" stopOpacity="0" />
+        <stop offset="1" stopColor="#AB4294" />
       </linearGradient>
       <linearGradient
         id="paint4_linear"
@@ -243,8 +243,8 @@ export const Box4 = () => (
         y2="101.609"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#1E769A" stop-opacity="0" />
-        <stop offset="1" stop-color="#56C6CD" />
+        <stop stopColor="#1E769A" stopOpacity="0" />
+        <stop offset="1" stopColor="#56C6CD" />
       </linearGradient>
       <linearGradient
         id="paint5_linear"
@@ -254,8 +254,8 @@ export const Box4 = () => (
         y2="314.798"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#AE2691" stop-opacity="0" />
-        <stop offset="1" stop-color="#AB4294" />
+        <stop stopColor="#AE2691" stopOpacity="0" />
+        <stop offset="1" stopColor="#AB4294" />
       </linearGradient>
     </defs>
   </svg>

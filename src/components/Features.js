@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useState } from "react"
+import React, { createRef, useEffect, useRef, useState } from "react"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 import copyCode from "../assets/copy-code.png"
@@ -9,14 +9,26 @@ import { Carousel } from "./Carousel"
 import throttle from "lodash.throttle"
 
 export const Features = () => {
+  const iterationRef = useRef(0)
   const [showCode, setShowCode] = useState(true)
+  const [isVisible, currentElement] = useVisibility(0)
+  const [isPlaying, setIsPlaying] = useState(true)
+
   const clickCopyCode = () => {
     setShowCode(false)
     setTimeout(() => setShowCode(true), 2000)
     navigator.clipboard.writeText(INTEGRATION_CODE)
   }
 
-  const [isVisible, currentElement] = useVisibility(0)
+  useEffect(() => {
+    const animated = document.querySelector(".animated-boxes .box-2")
+    animated.addEventListener("animationiteration", () => {
+      iterationRef.current++
+      if (iterationRef.current % 2 === 1) {
+        setIsPlaying(false)
+      }
+    })
+  }, [])
 
   return (
     <div className="relative mx-5">
@@ -44,7 +56,10 @@ export const Features = () => {
 
         <div
           ref={currentElement}
-          className={`animated-boxes ${isVisible ? "active" : ""}`}
+          role="presentation"
+          className={`animated-boxes ${isPlaying && isVisible ? "active" : ""}`}
+          onMouseEnter={() => setIsPlaying(true)}
+          onClick={() => setIsPlaying(true)}
         >
           <AnimatedBoxes.Box1 />
           <AnimatedBoxes.Box2 />
