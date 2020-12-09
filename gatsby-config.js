@@ -9,5 +9,11 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    {
+      resolve: "@mkitio/gatsby-theme-password-protect",
+      options: {
+        password: "iZJDEdNzcQ84MNkmVV",
+      },
+    },
   ],
 }

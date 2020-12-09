@@ -10,6 +10,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@mkitio/gatsby-theme-password-protect": "^2.1.2",
     "gatsby": "^2.24.50",
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
