@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import {
   HERO_IMAGE_POSITIONS,
   SAL_PROPS,
   HERO_IMAGES,
   HERO_IMAGE_SWAP_DURATION,
-  HERO_IMAGE_SWAP_DELAY,
 } from "../constants"
 import { MailingListInput } from "./MailingList"
 import ethLogo from "../assets/hero/eth.png"
 import linkImg from "../assets/link.png"
 import { CrossfadeImage } from "./CrossfadeImage"
+import shuffle from "lodash/shuffle"
+
+const positions = shuffle(HERO_IMAGE_POSITIONS)
 
 export const Hero = () => (
   <>
@@ -69,7 +71,7 @@ export const Hero = () => (
           </div>
 
           <div className="flex-1 relative hero-logo-container">
-            {HERO_IMAGE_POSITIONS.map((positionProps, index) => (
+            {positions.map((positionProps, index) => (
               <HeroLogo
                 key={index}
                 index={index}
@@ -84,20 +86,29 @@ export const Hero = () => (
   </>
 )
 
-const HeroLogo = props => {
-  const [index, setIndex] = useState(0)
+const HeroLogo = ({ images, index, size, ...props }) => {
+  const timeoutRef = useRef()
+  const [frameIndex, setFrameIndex] = useState(0)
+
+  const nextFrame = useCallback(() => {
+    timeoutRef.current = setTimeout(() => {
+      setFrameIndex(i => (i >= images.length - 1 ? 0 : i + 1))
+      timeoutRef.current = setTimeout(
+        nextFrame,
+        HERO_IMAGE_SWAP_DURATION * positions.length
+      )
+    }, HERO_IMAGE_SWAP_DURATION * (index + 1) + Math.floor(Math.random() * 4) * 500)
+  }, [images.length, index])
 
   useEffect(() => {
-    let interval = setInterval(() => {
-      setIndex(i => (i >= props.images.length - 1 ? 0 : i + 1))
-    }, HERO_IMAGE_SWAP_DURATION)
-    return () => clearInterval(interval)
-  }, [props.images.length])
+    nextFrame()
+    return () => clearTimeout(timeoutRef.current)
+  }, [nextFrame])
 
   return (
     <div
       className="hero-logo absolute pointer"
-      style={{ width: props.size, height: props.size, ...props }}
+      style={{ width: size, height: size, ...props }}
     >
       <a
         className="flex justify-center items-end absolute h-full w-full"
@@ -107,20 +118,20 @@ const HeroLogo = props => {
           opacity: 1,
           filter: "drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.2))",
         }}
-        href={props.images[index].href}
+        href={images[frameIndex].href}
       >
         <CrossfadeImage
           alt="logo"
-          delay={props.index * HERO_IMAGE_SWAP_DELAY}
+          delay={0}
           className="object-fit-contain absolute w-full h-full"
-          src={props.images[index].src}
+          src={images[frameIndex].src}
           style={{ width: "100%", height: "100%" }}
         />
         <div
           className="link mb-6 flex items-center text-center color-white"
           style={{ zIndex: 3 }}
         >
-          {props.images[index].label}
+          {images[frameIndex].label}
           <img
             alt="link"
             className="ml-2"
