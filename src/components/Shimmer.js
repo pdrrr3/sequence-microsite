@@ -1,7 +1,7 @@
 import React from "react"
 import shimmer from "../assets/shimmer.mp4"
 
-export const Shimmer = () => (
+export const Shimmer = ({ offset = "-50%", ...props }) => (
   <video
     autoPlay
     muted
@@ -12,6 +12,10 @@ export const Shimmer = () => (
       zIndex: -1,
       opacity: 0.5,
       width: "100vw",
+      transform: `translateY(${offset})`,
+      height: "100vw",
+      objectFit: "cover",
+      ...props,
     }}
   >
     <source src={shimmer} />

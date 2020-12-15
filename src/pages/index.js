@@ -34,9 +34,15 @@ export default function Home({ location }) {
 
       <Features />
 
+      <Shimmer />
+
       <SkyweaverCallout />
 
       <ContactForm />
+
+      <div style={{ position: "relative" }}>
+        <Shimmer bottom={0} offset="30%" />
+      </div>
 
       <Footer />
     </div>
