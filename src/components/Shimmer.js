@@ -15,6 +15,8 @@ export const Shimmer = ({ offset = "-50%", ...props }) => (
       transform: `translateY(${offset})`,
       height: "100vw",
       objectFit: "cover",
+      maxWidth: 1650,
+      maxHeight: 1650,
       ...props,
     }}
   >

@@ -23,7 +23,14 @@ export default function Home({ location }) {
   if (code !== "iZJDEdNzcQ84MNkmVV") return null
 
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div
+      style={{
+        overflowX: "hidden",
+        position: "relative",
+        maxWidth: 1650,
+        margin: "0 auto",
+      }}
+    >
       <Head />
 
       <Shimmer />
