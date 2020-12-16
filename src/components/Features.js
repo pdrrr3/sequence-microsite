@@ -21,7 +21,7 @@ export const Features = () => {
     <div className="relative mx-5">
       <div
         {...SAL_PROPS}
-        className="flex max-w-6xl flex-col lg:flex-row items-center mx-auto my-10 pb-10 lg:px-5"
+        className="flex max-w-6xl py-10 flex-col lg:flex-row items-center mx-auto my-10 pb-10 lg:px-5"
       >
         <div className="flex-1 w-full flex flex-col align-center justify-center lg:mr-10">
           <h2 style={{ maxWidth: 550 }}>
