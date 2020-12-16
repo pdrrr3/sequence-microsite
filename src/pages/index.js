@@ -23,17 +23,10 @@ export default function Home({ location }) {
   if (code !== "iZJDEdNzcQ84MNkmVV") return null
 
   return (
-    <div
-      style={{
-        overflowX: "hidden",
-        position: "relative",
-        maxWidth: 1650,
-        margin: "0 auto",
-      }}
-    >
+    <div style={{ overflowX: "hidden" }}>
       <Head />
 
-      <Shimmer />
+      <Shimmer offset="-30%" />
 
       <Header />
 
@@ -41,15 +34,13 @@ export default function Home({ location }) {
 
       <Features />
 
-      <Shimmer />
+      <Shimmer offset="-60%" />
 
       <SkyweaverCallout />
 
       <ContactForm />
 
-      <div style={{ position: "relative" }}>
-        <Shimmer bottom={0} offset="30%" />
-      </div>
+      <Shimmer height="60vw" offset="-75%" />
 
       <Footer />
     </div>

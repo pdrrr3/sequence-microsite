@@ -4,7 +4,10 @@ import skyweaverBGPng from "../assets/skyweaverbg.png"
 import { SAL_PROPS } from "../constants"
 
 export const SkyweaverCallout = () => (
-  <div className="relative text-white px-4 py-10 mx-2 mb-10 md:text-center md:mx-4 lg:mx-8">
+  <div
+    className="relative text-white px-4 py-10 mx-2 mb-10 md:text-center md:mx-4 lg:mx-8"
+    style={{ zIndex: 5 }}
+  >
     <SkyweaverBackground />
 
     <div
