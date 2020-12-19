@@ -13,16 +13,18 @@
 }
 
 .animated-boxes svg {
+  overflow: visible;  /* some browsers might clip svgs regardless of overflow rule. Might need to restructure boxes/text to not rely on overflow */
   position: absolute;
 }
 
-.animated-boxes .box-sdk,
-.animated-boxes .box-wallet,
+.animated-boxes .box-sdk .box3d,
+.animated-boxes .box-wallet .box3d,
 .animated-boxes .box-sequence {
   opacity: 0;
 }
 
 .animated-boxes .box,
+.animated-boxes .box .box3d,
 .animated-boxes .box .box-text {
   animation-duration: 8s;
   animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
@@ -33,35 +35,54 @@
 }
 
 .animated-boxes.animate-out .box,
+.animated-boxes.animate-out .box .box3d,
 .animated-boxes.animate-out .box .box-text {
   animation-duration: 1.5s;
 }
 
 .animated-boxes.active .box,
+.animated-boxes.active .box .box3d,
 .animated-boxes.active .box-text {
   animation-play-state: running;
 }
 
-.animated-boxes .box-eth .box-text,
-.animated-boxes .box-sdk .box-text,
+.animated-boxes .box-eth .box-text {
+  animation-name: animate-box-eth-text-in;
+}
+
+.animated-boxes .box-sdk .box-text {
+  animation-name: animate-box-sdk-text-in;
+}
+
 .animated-boxes .box-wallet .box-text {
-  animation-name: animate-box-text-in;
+  animation-name: animate-box-wallet-text-in;
 }
 
-.animated-boxes.animate-out .box-eth .box-text,
-.animated-boxes.animate-out .box-sdk .box-text,
+.animated-boxes.animate-out .box-eth .box-text {
+  animation-name: animate-box-eth-text-out;
+}
+
+.animated-boxes.animate-out .box-sdk .box-text {
+  animation-name: animate-box-sdk-text-out;
+}
+
 .animated-boxes.animate-out .box-wallet .box-text {
-  animation-name: animate-box-text-out;
+  animation-name: animate-box-wallet-text-out;
 }
 
-.animated-boxes .box-sdk {
-  z-index: 3;
+.animated-boxes .box-sdk .box3d {
   animation-name: animate-box-sdk-in;
 }
 
+.animated-boxes .box-wallet .box3d {
+  animation-name: animate-box-wallet-in;
+}
+
+.animated-boxes .box-sdk .box3d,
+.animated-boxes .box-wallet .box3d,
+.animated-boxes .box-sdk,
 .animated-boxes .box-wallet {
   z-index: 3;
-  animation-name: animate-box-wallet-in;
 }
 
 .animated-boxes .box-sequence {
@@ -70,11 +91,11 @@
   animation-name: animate-box-sequence-in;
 }
 
-.animated-boxes.animate-out .box-sdk {
+.animated-boxes.animate-out .box-sdk .box3d {
   animation-name: animate-box-sdk-out;
 }
 
-.animated-boxes.animate-out .box-wallet {
+.animated-boxes.animate-out .box-wallet .box3d {
   animation-name: animate-box-wallet-out;
 }
 
@@ -139,7 +160,7 @@
     opacity: 0;
     transform: translateY(-200px);
   }
-  30% {
+  35% {
     opacity: 1;
     transform: translateY(-200px);
   }
@@ -169,13 +190,54 @@
   }
 }
 
-@keyframes animate-box-text-in {
-  0%,
+@keyframes animate-box-eth-text-in {
+  0% {
+    opacity: 1;
+  }
   50% {
     opacity: 1;
   }
   60% {
     opacity: 0;
+  }
+}
+
+@keyframes animate-box-sdk-text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes animate-box-wallet-text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-60px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-40px);
   }
 }
 
@@ -212,11 +274,33 @@
   }
 }
 
-@keyframes animate-box-text-out {
+@keyframes animate-box-eth-text-out {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes animate-box-sdk-text-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes animate-box-wallet-text-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-60px);
   }
 }
