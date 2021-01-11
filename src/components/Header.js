@@ -1,5 +1,4 @@
 import React from "react"
-import { Button } from "./Button"
 import logoPng from "../assets/sequence-logo.png"
 import { URIS } from "../constants"
 

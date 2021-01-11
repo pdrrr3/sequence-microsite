@@ -6,12 +6,12 @@ import {
   HERO_IMAGE_SWAP_DURATION,
 } from "../constants"
 import { MailingListInput } from "./MailingList"
-import ethLogo from "../assets/hero/eth.png"
+import ethLogo from "../assets/hero/eth-logo.png"
 import linkImg from "../assets/link.png"
 import { CrossfadeImage } from "./CrossfadeImage"
-import shuffle from "lodash/shuffle"
-
-const positions = shuffle(HERO_IMAGE_POSITIONS)
+// import shuffle from "lodash/shuffle"
+// const positions = shuffle(HERO_IMAGE_POSITIONS)
+const positions = HERO_IMAGE_POSITIONS
 
 export const Hero = () => (
   <>

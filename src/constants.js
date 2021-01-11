@@ -1,8 +1,62 @@
-import headerLogo1 from "./assets/hero/1.png"
-import headerLogo2 from "./assets/hero/2.png"
-import headerLogo3 from "./assets/hero/3.png"
-import headerLogo4 from "./assets/hero/4.png"
-import headerLogo5 from "./assets/hero/5.png"
+import UniswapPng from "./assets/hero/Uniswap.png"
+import OpenSeaPng from "./assets/hero/OpenSea.png"
+import SkyweaverPng from "./assets/hero/Skyweaver.png"
+import ETHPng from "./assets/hero/ETH.png"
+import DecentralandPng from "./assets/hero/Decentraland.png"
+import MakerDAOPng from "./assets/hero/MakerDAO.png"
+import AxielPng from "./assets/hero/Axiel.png"
+import SuperRarePng from "./assets/hero/SuperRare.png"
+import SandboxPng from "./assets/hero/Sandbox.png"
+import CurvePng from "./assets/hero/Curve.png"
+
+const HERO_BRANDS = {
+  Uniswap: { label: "Uniswap", href: "https://uniswap.org/", src: UniswapPng },
+  OpenSea: { label: "OpenSea", href: "https://opensea.io/", src: OpenSeaPng },
+  Skyweaver: {
+    label: "Skyweaver",
+    href: "https://skyweaver.net/",
+    src: SkyweaverPng,
+  },
+  ETH: { label: "ETH", href: "https://ethereum.org/en/", src: ETHPng },
+  Decentraland: {
+    label: "Decentraland",
+    href: "https://decentraland.org/",
+    src: DecentralandPng,
+  },
+  MakerDAO: {
+    label: "MakerDAO",
+    href: "https://makerdao.com/en/",
+    src: MakerDAOPng,
+  },
+  AxieInfinity: {
+    label: "AxieInfinity",
+    href: "https://axieinfinity.com/",
+    src: AxielPng,
+  },
+  Superrare: {
+    label: "Superrare",
+    href: "https://superrare.co/",
+    src: SuperRarePng,
+  },
+  TheSandbox: {
+    label: "The Sandbox",
+    href: "https://www.sandbox.game/en/",
+    src: SandboxPng,
+  },
+  CurveFinance: {
+    label: "Curve Finance",
+    href: "https://www.curve.fi/",
+    src: CurvePng,
+  },
+}
+
+export const HERO_IMAGES = [
+  [HERO_BRANDS.Uniswap, HERO_BRANDS.MakerDAO],
+  [HERO_BRANDS.OpenSea, HERO_BRANDS.AxieInfinity],
+  [HERO_BRANDS.Skyweaver, HERO_BRANDS.Superrare],
+  [HERO_BRANDS.ETH, HERO_BRANDS.TheSandbox],
+  [HERO_BRANDS.Decentraland, HERO_BRANDS.CurveFinance],
+]
 
 export const SAL_PROPS = {
   "data-sal": "slide-up",
@@ -40,67 +94,4 @@ export const HERO_IMAGE_POSITIONS = [
   { size: 230, top: 105, left: 10 },
   { size: 307, top: 50, left: 300 },
   { size: 155, top: 350, left: 230 },
-]
-
-export const HERO_IMAGES = [
-  [
-    {
-      src: headerLogo4,
-      href: "https://google.ca",
-      label: "Unicorn.org",
-    },
-    {
-      src: headerLogo2,
-      href: "https://google.ca",
-      label: "OpenSea.org",
-    },
-  ],
-  [
-    {
-      src: headerLogo2,
-      href: "https://google.ca",
-      label: "OpenSea.org",
-    },
-    {
-      src: headerLogo5,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-  ],
-  [
-    {
-      src: headerLogo5,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-    {
-      src: headerLogo1,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-  ],
-  [
-    {
-      src: headerLogo1,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-    {
-      src: headerLogo3,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-  ],
-  [
-    {
-      src: headerLogo3,
-      href: "https://google.ca",
-      label: "Etherium.org",
-    },
-    {
-      src: headerLogo4,
-      href: "https://google.ca",
-      label: "Unicorn.org",
-    },
-  ],
 ]
