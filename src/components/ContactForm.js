@@ -5,11 +5,11 @@ export const ContactForm = () => (
   <div className="relative px-2 pt-8 pb-10 mb-10 md:px-4">
     <div id="contact" className="container text-center">
       <div className="max-w-2xl mx-auto mb-8">
-        <h2 className="mb-4">Get a Demo</h2>
+        <h2 className="mb-4">We're here to help</h2>
 
         <p>
-          Find out more about how you Sequence can help you build the next
-          generation of Internet economies and experiences
+          Sequence helps you build the next generation of Internet economies and
+          experiences. Contact us to learn more.
         </p>
       </div>
 
@@ -38,10 +38,11 @@ export const ContactForm = () => (
         </Button>
       </form>
 
-      <p className="max-w-md mx-auto mt-10">
+      <p className="footnote max-w-md mx-auto mt-10">
         We typically respond to inquiries within 48 hours
         <br />
-        You can also email us directly at hello@sequence.com
+        You can also email us directly at{" "}
+        <a href="mailto:hello@sequence.build">hello@sequence.build</a>
       </p>
     </div>
   </div>

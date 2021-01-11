@@ -12,11 +12,8 @@ export const Header = () => (
     </div>
 
     <div className="hidden sm:flex flex-1 justify-end items-center">
-      <HeaderLink href={URIS.contact}>Contact</HeaderLink>
       <HeaderLink href={URIS.community}>Community</HeaderLink>
-      <Button className="ml-4" small>
-        Book a Demo
-      </Button>
+      <HeaderLink href={URIS.contact}>Contact</HeaderLink>
     </div>
   </header>
 )
