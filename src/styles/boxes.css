@@ -13,7 +13,7 @@
 }
 
 .animated-boxes svg {
-  overflow: visible;  /* some browsers might clip svgs regardless of overflow rule. Might need to restructure boxes/text to not rely on overflow */
+  overflow: visible; /* some browsers might clip svgs regardless of overflow rule. Might need to restructure boxes/text to not rely on overflow */
   position: absolute;
 }
 
@@ -21,6 +21,10 @@
 .animated-boxes .box-wallet .box3d,
 .animated-boxes .box-sequence {
   opacity: 0;
+}
+
+.animated-boxes {
+  will-change: opacity, transform;
 }
 
 .animated-boxes .box,
@@ -136,7 +140,7 @@
   }
   0% {
     transform: translateY(-200px);
-    animation-timing-function: cubic-bezier(0,1,0.75,1);
+    animation-timing-function: cubic-bezier(0, 1, 0.75, 1);
   }
   10% {
     opacity: 1;
@@ -144,7 +148,7 @@
   25%,
   60% {
     transform: translateY(-40px);
-    animation-timing-function: cubic-bezier(0.35,0,0.35,1);
+    animation-timing-function: cubic-bezier(0.35, 0, 0.35, 1);
   }
   80% {
     opacity: 1;
@@ -152,7 +156,8 @@
   100% {
     opacity: 0;
   }
-  80%, 100% {
+  80%,
+  100% {
     transform: translateY(-20px);
   }
 }
@@ -163,7 +168,7 @@
   }
   25% {
     transform: translateY(-200px);
-    animation-timing-function: cubic-bezier(0,1,0.75,1);
+    animation-timing-function: cubic-bezier(0, 1, 0.75, 1);
   }
   35% {
     opacity: 1;
@@ -171,7 +176,7 @@
   50%,
   60% {
     transform: translateY(-80px);
-    animation-timing-function: cubic-bezier(0.35,0,0.35,1);
+    animation-timing-function: cubic-bezier(0.35, 0, 0.35, 1);
   }
   80% {
     opacity: 1;
@@ -179,7 +184,8 @@
   100% {
     opacity: 0;
   }
-  80%, 100% {
+  80%,
+  100% {
     transform: translateY(-30px);
   }
 }
@@ -201,7 +207,7 @@
   }
   60% {
     opacity: 1;
-    animation-timing-function: cubic-bezier(0.35,0,0.35,1);
+    animation-timing-function: cubic-bezier(0.35, 0, 0.35, 1);
   }
   80% {
     opacity: 0;
@@ -219,7 +225,7 @@
   60% {
     opacity: 1;
     transform: translateY(-30px);
-    animation-timing-function: cubic-bezier(0.35,0,0.35,1);
+    animation-timing-function: cubic-bezier(0.35, 0, 0.35, 1);
   }
   80% {
     opacity: 0;
@@ -241,7 +247,7 @@
   60% {
     opacity: 1;
     transform: translateY(-60px);
-    animation-timing-function: cubic-bezier(0.35,0,0.35,1);
+    animation-timing-function: cubic-bezier(0.35, 0, 0.35, 1);
   }
   80% {
     opacity: 0;
