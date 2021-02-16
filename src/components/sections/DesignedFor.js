@@ -52,11 +52,11 @@ export const DesignedFor = ({ className }) => {
 }
 
 const ITEMS = [
+  "Payments",
   "Exchanges",
   "Marketplaces",
-  "Payments",
+  "Payments ",
   "Gaming",
   "DeFi",
   "NFTs + Collectibles",
-  "Other",
 ]
