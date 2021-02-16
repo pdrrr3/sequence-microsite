@@ -1,0 +1,73 @@
+.button {
+  display: block;
+  position: relative;
+  min-width: 80px;
+  max-width: 250px;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.button.outlined {
+  padding: 7px 20px;
+  background-color: #111;
+}
+
+.outlined-wrap {
+  padding: 2px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    20deg,
+    #66345b 0%,
+    #2f3380 20%,
+    #44888c 100%
+  );
+}
+
+.button.contained {
+  background-color: #404040;
+}
+
+.button.small {
+  min-width: 140px;
+}
+
+.button span {
+  z-index: 1;
+}
+
+.button.gradient:hover::before {
+  background-position-x: 80%;
+}
+
+.button.gradient {
+  opacity: 1 !important;
+}
+
+.button.gradient::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    20deg,
+    #66345b 0%,
+    #2f3380 20%,
+    #44888c 60%,
+    #44888c 65%,
+    #2f3380 100%
+  );
+  background-size: 200%;
+  background-position-x: 0%;
+  transition: background-position-x 500ms;
+}
+
+@media (min-width: 640px) {
+  .button {
+    min-width: 130px;
+  }
+}

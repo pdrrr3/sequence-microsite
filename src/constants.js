@@ -87,11 +87,3 @@ intent = Stripe::PaymentIntent.retrieve(
 intent.capture`
 
 export const HERO_IMAGE_SWAP_DURATION = 5000
-
-export const HERO_IMAGE_POSITIONS = [
-  { size: 170, top: -100, left: -30 },
-  { size: 230, top: -180, left: 210 },
-  { size: 230, top: 105, left: 10 },
-  { size: 307, top: 50, left: 300 },
-  { size: 155, top: 350, left: 230 },
-]

@@ -3,7 +3,7 @@ import { Button } from "../Button"
 
 export const ContactForm = ({ className }) => (
   <div id="contact" className={`relative container text-center ${className}`}>
-    <div className="max-w-2xl mx-auto mb-8">
+    <div className="max-w-sm sm:max-w-2xl mx-auto mb-8">
       <h2 className="mb-4">We're here to help</h2>
       <p>
         Sequence helps you build the next generation of Internet economies and
@@ -22,12 +22,12 @@ export const ContactForm = ({ className }) => (
         }
       }}
     >
-      <div className="flex flex-col max-w-4xl mx-auto mb-4">
+      <div className="flex flex-col max-w-4xl mx-auto mb-4 w-full">
         <div className="flex-1 flex flex-col md:flex-row">
           <Input name="email" label="Your Email" />
-          <Input name="website" label="Company Website" />
+          <Input name="name" label="Your Name" />
         </div>
-        <Input name="name" label="Your Name" />
+        <Input name="website" label="Company Website" />
         <TextArea name="about" label="Tell us about your project" />
       </div>
 

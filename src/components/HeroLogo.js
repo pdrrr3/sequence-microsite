@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { useCallback, useRef } from "react"
-import { HERO_IMAGE_SWAP_DURATION } from "../constants"
+import { HERO_IMAGES, HERO_IMAGE_SWAP_DURATION } from "../constants"
 import linkImg from "../assets/link.png"
 import { CrossfadeImage } from "./CrossfadeImage"
-import { positions } from "../pages/index"
 
-export const HeroLogo = ({ images, index, size, ...props }) => {
+export const HeroLogo = ({ images, index, size }) => {
   const timeoutRef = useRef()
   const [frameIndex, setFrameIndex] = useState(0)
 
@@ -14,7 +13,7 @@ export const HeroLogo = ({ images, index, size, ...props }) => {
       setFrameIndex(i => (i >= images.length - 1 ? 0 : i + 1))
       timeoutRef.current = setTimeout(
         nextFrame,
-        HERO_IMAGE_SWAP_DURATION * positions.length
+        HERO_IMAGE_SWAP_DURATION * HERO_IMAGES.length
       )
     }, HERO_IMAGE_SWAP_DURATION * (index + 1) + Math.floor(Math.random() * 4) * 500)
   }, [images.length, index])
@@ -25,10 +24,7 @@ export const HeroLogo = ({ images, index, size, ...props }) => {
   }, [nextFrame])
 
   return (
-    <div
-      className="hero-logo absolute pointer"
-      style={{ width: size, height: size, ...props }}
-    >
+    <div className={`hero-logo absolute pointer hero-logo-${index}`}>
       <a
         className="flex justify-center items-end absolute h-full w-full"
         target="_blank"

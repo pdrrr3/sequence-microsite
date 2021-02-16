@@ -1,32 +1,37 @@
 import React, { useState } from "react"
 import logoPng from "../../assets/sequence-logo.png"
 import iconPng from "../../assets/sequence-icon.png"
+import openMenuPng from "../../assets/menu-open.png"
+import closeMenuPng from "../../assets/menu-close.png"
 import { URIS } from "../../constants"
 import { Button } from "../../components/Button"
 import { MailingListInput } from "../../components/MailingList"
 
-// TODO: add button outline style
 export const Header = ({ className }) => {
   const [open, setOpen] = useState()
+  const onClose = () => setOpen(false)
   return (
     <header className={`flex flex-1 justify-between mx-auto ${className}`}>
-      <div className="flex items-center justify-center sm:justify-start">
-        <a className="hidden sm:block" href="/">
+      <div className="flex items-center justify-center md:justify-start">
+        <a className="hidden md:block" href="/">
           <img alt="logo" src={logoPng} style={{ height: 32 }} />
         </a>
       </div>
 
-      <div className="hidden sm:flex flex-1 justify-end items-center">
+      <div className="hidden md:flex flex-1 justify-end items-center">
         <HeaderLink href={URIS.docs}>Docs</HeaderLink>
         <HeaderLink href={URIS.github}>Github</HeaderLink>
         <HeaderLink href={URIS.community}>Discord</HeaderLink>
         <HeaderLink href={URIS.contact}>Contact</HeaderLink>
-        <Button className="ml-5">Launch Wallet</Button>
+        <Button variant="outlined" className="ml-5">
+          Launch Wallet
+        </Button>
       </div>
 
-      <div className="sm:hidden">
-        {/* TODO: icon */}
-        <Button onClick={() => setOpen(true)}>O</Button>
+      <div className="md:hidden">
+        <button onClick={() => setOpen(true)}>
+          <img alt="menu-open" src={openMenuPng} style={{ height: 55 }} />
+        </button>
 
         <nav
           className="py-5 pl-7 pr-5"
@@ -48,36 +53,37 @@ export const Header = ({ className }) => {
               style={{ height: 64, marginTop: 12 }}
             />
 
-            {/* TODO: icon */}
-            <Button Component="button" onClick={() => setOpen(false)}>
-              X
-            </Button>
+            <button onClick={onClose}>
+              <img alt="menu-close" src={closeMenuPng} style={{ height: 55 }} />
+            </button>
           </div>
 
           <div className="my-8">
-            <a className="nav-link" href={URIS.docs}>
+            <a className="nav-link" href={URIS.docs} onClick={onClose}>
               Docs
             </a>
-            <a className="nav-link" href={URIS.github}>
+            <a className="nav-link" href={URIS.github} onClick={onClose}>
               Github
             </a>
-            <a className="nav-link" href={URIS.community}>
+            <a className="nav-link" href={URIS.community} onClick={onClose}>
               Discord
             </a>
-            <a className="nav-link" href={URIS.contact}>
+            <a className="nav-link" href={URIS.contact} onClick={onClose}>
               Contact
             </a>
           </div>
 
-          <div className="mb-8">
-            {/* TODO: outline button */}
-            <Button Component="button" onClick={() => window.open(URIS.github)}>
+          <div className="mb-8 inline-block">
+            <Button
+              variant="outlined"
+              Component="button"
+              onClick={() => window.open(URIS.github)}
+            >
               Launch Wallet
             </Button>
           </div>
 
           <div className="mb-5" style={{ maxWidth: 380 }}>
-            {/* TODO: gray button */}
             <MailingListInput grayscale small />
           </div>
 

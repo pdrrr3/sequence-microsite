@@ -7,39 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-.button {
-  background-image: linear-gradient(
-      83.57deg,
-      rgba(0, 0, 0, 0) 13.55%,
-      rgba(34, 201, 191, 0.15) 98.35%
-    ),
-    linear-gradient(
-      265.77deg,
-      rgba(0, 0, 0, 0) 44.4%,
-      rgba(92, 47, 115, 0.75) 110.31%
-    ),
-    linear-gradient(0deg, #2a2a2a, #2a2a2a);
-  min-width: 80px;
-  max-width: 250px;
-}
-
-.button.small {
-  min-width: 140px;
-}
-
-.button span {
-  z-index: 1;
-}
-
-footer {
-  background: #151515;
-}
-
-footer a {
-  font-size: 16px;
-  min-width: 150px;
-}
-
 .note {
   font-size: 12px;
   opacity: 0.6;
@@ -60,12 +27,6 @@ code {
   font-weight: 500;
 }
 
-@media (min-width: 640px) {
-  .button {
-    min-width: 130px;
-  }
-}
-
 nav p {
   font-size: 12px;
 }
@@ -73,4 +34,46 @@ nav a.nav-link {
   display: block;
   font-size: 30px;
   margin: 16px 0;
+}
+
+footer {
+  background: #151515;
+}
+
+footer a {
+  font-size: 16px;
+  min-width: 150px;
+}
+
+#designed-for h2.gradient2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  background: linear-gradient(
+    85.44deg,
+    #ad64b9 0%,
+    #9e64b9 5%,
+    #6477b9 30%,
+    #8cdce1 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 18px 0;
+}
+
+@media (max-width: 1000px) {
+  #designed-for {
+    max-width: 550px;
+  }
+  #designed-for .heading-wrap {
+    max-width: 130px;
+  }
+  #designed-for .heading-wrap h2 {
+    font-size: 24px;
+  }
+
+  #designed-for h2.gradient2 {
+    font-size: 40px;
+  }
 }

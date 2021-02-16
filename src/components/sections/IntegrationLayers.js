@@ -5,9 +5,12 @@ import { SAL_PROPS } from "../../constants"
 export const IntegrationLayers = ({ className }) => (
   <div
     {...SAL_PROPS}
-    className={`flex flex-col items-center mx-auto lg:flex-row ${className}`}
+    className={`flex flex-col-reverse items-center mx-auto lg:flex-row ${className}`}
   >
-    <div className="flex-1 w-full flex flex-col justify-center lg:mr-10">
+    <div
+      className="flex-1 w-full flex flex-col justify-center px-7 sm:px-0 lg:mr-10"
+      style={{ maxWidth: 550 }}
+    >
       <h2 style={{ maxWidth: 550 }}>
         Finally, a friendly
         <br />
@@ -16,7 +19,7 @@ export const IntegrationLayers = ({ className }) => (
 
       <div className="my-4" />
 
-      <p>
+      <p style={{ maxWidth: 500 }}>
         Sequence gives you a friendly smart wallet, an end-to-end SDK to
         integrate Ethereum with your web application, and powerful APIs for the
         security you need.

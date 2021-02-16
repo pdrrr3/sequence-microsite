@@ -11,7 +11,7 @@ export const Footer = ({ className }) => (
         className="flex flex-col items-center flex-1 justify-between pt-10 w-full lg:flex-row lg:items-start"
         style={{ minHeight: 400 }}
       >
-        <div className="flex flex-col flex-1 items-center text-center max-w-sm lg:items-start lg:text-left">
+        <div className="flex flex-col flex-1 items-center text-center max-w-sm w-full lg:items-start lg:text-left">
           <img
             className="mb-5"
             style={{ height: 40 }}

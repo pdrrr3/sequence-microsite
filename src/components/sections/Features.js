@@ -8,7 +8,7 @@ export const Features = ({ className }) => (
     {...SAL_PROPS}
     className={`flex flex-col items-center mx-auto lg:flex-row ${className}`}
   >
-    <div className="flex-1 flex flex-col items-center justify-center lg:text-center">
+    <div className="flex-1 flex flex-col items-center justify-center text-center">
       <div className="max-w-2xl">
         <h2>Our SDK + APIs make blockchain simple and user friendly</h2>
 
@@ -20,7 +20,7 @@ export const Features = ({ className }) => (
         </p>
       </div>
 
-      <div className="mt-10 mx-auto hidden sm:block" style={{ maxWidth: 1000 }}>
+      <div className="mt-8 mx-auto hidden sm:block" style={{ maxWidth: 1200 }}>
         <img alt="features" className="object-fit" src={featuresPng} />
       </div>
 

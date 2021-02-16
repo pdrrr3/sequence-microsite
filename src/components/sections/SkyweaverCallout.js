@@ -4,10 +4,7 @@ import skyweaverBGPng from "../../assets/skyweaverbg.png"
 import { SAL_PROPS } from "../../constants"
 
 export const SkyweaverCallout = ({ className }) => (
-  <div
-    className={`relative mx-auto md:text-center ${className}`}
-    style={{ zIndex: 5 }}
-  >
+  <div className={`relative md:text-center ${className}`} style={{ zIndex: 5 }}>
     <SkyweaverBackground />
 
     <div
@@ -34,7 +31,7 @@ export const SkyweaverCallout = ({ className }) => (
 const SkyweaverBackground = () => (
   <div className="absolute inset-0" style={{ zIndex: -1 }}>
     <img
-      className="object-cover object-left md:object-center w-full h-full relative rounded"
+      className="object-cover object-center sm:object-left md:object-center w-full h-full relative rounded"
       alt="skyweaverbg"
       src={skyweaverBGPng}
       style={{ zIndex: 1 }}

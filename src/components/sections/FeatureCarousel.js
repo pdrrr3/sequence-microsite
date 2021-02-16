@@ -5,15 +5,16 @@ import copyCode from "../../assets/copy-code.png"
 
 export const FeatureCarousel = ({ className, clickCopyCode, showCode }) => (
   <div
-    className={`flex flex-col items-center mx-auto lg:flex-row ${className}`}
+    className={`flex flex-col items-center justify-between px-4 mx-auto lg:flex-row ${className}`}
   >
-    <div {...SAL_PROPS} className="flex-1 w-full max-w-md lg:max-w-xl lg:pr-10">
+    <div {...SAL_PROPS} className="w-full max-w-md lg:max-w-md">
       <Carousel />
     </div>
 
     <div
       {...SAL_PROPS}
-      className="flex-1 flex flex-col items-center justify-center pt-7 md:px-2 lg:pl-6"
+      className="flex flex-col justify-center pt-7"
+      style={{ maxWidth: 500 }}
     >
       <h2>An Ethereum Web Wallet anyone can use</h2>
 
@@ -29,9 +30,9 @@ export const FeatureCarousel = ({ className, clickCopyCode, showCode }) => (
 
       <h3>Integrate Sequence in four lines of code</h3>
 
-      <code className="mt-6">
-        <button onClick={clickCopyCode}>
-          <img alt="copy-code" src={copyCode} className="copy-code" />
+      <code className="mt-6" style={{ maxWidth: 500 }}>
+        <button onClick={clickCopyCode} className="copy-code">
+          <img alt="copy-code" src={copyCode} />
         </button>
         {showCode ? INTEGRATION_CODE : "Code copied!"}
       </code>

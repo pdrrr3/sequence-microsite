@@ -1,19 +1,32 @@
 import React from "react"
 
-// TODO: new button gradient
 export const Button = ({
   children,
-  solid,
+  variant = "gradient",
   className = "",
   Component = "a",
   ...props
 }) => {
   const textColorClass = className.match(/text-/) ? "" : "text-medium-gray"
 
+  if (variant === "outlined") {
+    return (
+      <div className={`outlined-wrap ${className}`}>
+        <Component
+          href="/#"
+          className={`button ${variant} ${textColorClass}`}
+          {...props}
+        >
+          <span className="relative">{children}</span>
+        </Component>
+      </div>
+    )
+  }
+
   return (
     <Component
       href="/#"
-      className={`button block rounded-full bg-blue text-center relative gradient-shift px-6 py-3 ${className} ${textColorClass}`}
+      className={`button ${variant} ${className} ${textColorClass}`}
       {...props}
     >
       <span className="relative">{children}</span>

@@ -45,6 +45,7 @@ h1 {
 
 h2 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 h3 {
@@ -86,8 +87,11 @@ code .copy-code {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 30px;
   cursor: pointer;
+}
+
+code .copy-code img {
+  width: 30px;
 }
 
 .button {
@@ -105,13 +109,10 @@ a:hover {
 }
 
 .label {
-  font-size: 23px;
-}
-
-.label {
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
+  font-size: 15px;
   line-height: 140%;
   color: #999;
 }
@@ -175,10 +176,6 @@ input {
 
   .button {
     font-size: 16px;
-  }
-
-  .label {
-    font-size: 18px;
   }
 
   p.large {

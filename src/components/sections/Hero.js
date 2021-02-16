@@ -14,18 +14,24 @@ export const Hero = ({ className }) => (
         <img alt="logo" src={logoPng} style={{ height: 40 }} />
       </div>
 
-      <h1 className="mt-2 mb-4">
+      <h1 className="mt-2 mb-5 max-w-md sm:max-w-4xl">
         A seamless user and developer experience for Ethereum
       </h1>
 
       <p
-        className="large mx-auto max-w-4xl text-light-gray mb-6"
+        className="large mx-auto text-light-gray mb-6 max-w-sm sm:max-w-4xl"
         style={{ fontSize: 20 }}
       >
         Sequence lets you integrate blockchain with your product in two minutes
       </p>
-
-      <Button>Get Started</Button>
+      <div className="hidden sm:block">
+        <Button>Get Started</Button>
+      </div>
+      <div className="sm:hidden">
+        <Button>Start Building</Button>
+        <div className="my-4" />
+        <Button variant="outlined">Launch Wallet</Button>
+      </div>
     </div>
   </div>
 )
