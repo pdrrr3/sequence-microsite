@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "./Button"
+import { SAL_PROPS } from "../constants"
 
 export const MailingListInput = ({ grayscale, small, className }) => (
   <div
@@ -21,5 +22,17 @@ export const MailingListInput = ({ grayscale, small, className }) => (
     <Button Component="button" className="block" style={{ minWidth: 120 }}>
       Join
     </Button>
+  </div>
+)
+
+export const MailingListSection = ({ className }) => (
+  <div
+    {...SAL_PROPS}
+    className={`mx-auto flex items-center justify-center rounded ${className}`}
+    style={{ backgroundColor: "#111" }}
+  >
+    <h3 className="">Stay up to date with Sequence</h3>
+
+    <MailingListInput small />
   </div>
 )

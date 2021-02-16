@@ -1,15 +1,15 @@
 import React, { useState } from "react"
-import logoPng from "../assets/sequence-logo.png"
-import iconPng from "../assets/sequence-icon.png"
-import { URIS } from "../constants"
-import { Button } from "./Button"
-import { MailingListInput } from "./MailingList"
+import logoPng from "../../assets/sequence-logo.png"
+import iconPng from "../../assets/sequence-icon.png"
+import { URIS } from "../../constants"
+import { Button } from "../../components/Button"
+import { MailingListInput } from "../../components/MailingList"
 
 // TODO: add button outline style
-export const Header = () => {
+export const Header = ({ className }) => {
   const [open, setOpen] = useState()
   return (
-    <header className="flex flex-1 justify-between max-w-6xl mx-auto mt-5 px-5">
+    <header className={`flex flex-1 justify-between mx-auto ${className}`}>
       <div className="flex items-center justify-center sm:justify-start">
         <a className="hidden sm:block" href="/">
           <img alt="logo" src={logoPng} style={{ height: 32 }} />
@@ -92,7 +92,7 @@ export const Header = () => {
 }
 
 const HeaderLink = ({ children, href = "/#" }) => (
-  <a href={href} target="_blank" className="px-4">
+  <a href={href} target="_blank" rel="noreferrer" className="px-4">
     {children}
   </a>
 )

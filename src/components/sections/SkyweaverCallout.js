@@ -1,18 +1,18 @@
 import React from "react"
-import skyweaverPng from "../assets/skyweaver-logo.png"
-import skyweaverBGPng from "../assets/skyweaverbg.png"
-import { SAL_PROPS } from "../constants"
+import skyweaverPng from "../../assets/skyweaver-logo.png"
+import skyweaverBGPng from "../../assets/skyweaverbg.png"
+import { SAL_PROPS } from "../../constants"
 
-export const SkyweaverCallout = () => (
+export const SkyweaverCallout = ({ className }) => (
   <div
-    className="relative text-white max-w-6xl px-4 py-10 mx-2 mb-10 md:text-center mx-auto"
+    className={`relative mx-auto md:text-center ${className}`}
     style={{ zIndex: 5 }}
   >
     <SkyweaverBackground />
 
     <div
       {...SAL_PROPS}
-      className="mx-auto max-w-xl flex flex-col items-center px-2 py-3"
+      className="mx-auto max-w-xl flex flex-col items-center px-2 py-3 text-white"
     >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
       <h3 className="text-white mt-5 mb-7">Powered by Sequence</h3>

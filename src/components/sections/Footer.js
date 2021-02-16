@@ -1,12 +1,12 @@
 import React from "react"
-import logoPng from "../assets/sequence-logo.png"
-import footerPng from "../assets/horizon-logo.png"
-import { MailingListInput } from "./MailingList"
-import { URIS } from "../constants"
+import logoPng from "../../assets/sequence-logo.png"
+import footerPng from "../../assets/horizon-logo.png"
+import { MailingListInput } from "../MailingList"
+import { URIS } from "../../constants"
 
-export const Footer = () => (
+export const Footer = ({ className }) => (
   <footer>
-    <div className="container lg:px-8">
+    <div className={`container ${className}`}>
       <div
         className="flex flex-col items-center flex-1 justify-between pt-10 w-full lg:flex-row lg:items-start"
         style={{ minHeight: 400 }}
