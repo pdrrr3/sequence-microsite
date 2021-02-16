@@ -5,14 +5,14 @@ import { SAL_PROPS } from "../constants"
 
 export const SkyweaverCallout = () => (
   <div
-    className="relative text-white px-4 py-10 mx-2 mb-10 md:text-center md:mx-4 lg:mx-8"
+    className="relative text-white max-w-6xl px-4 py-10 mx-2 mb-10 md:text-center mx-auto"
     style={{ zIndex: 5 }}
   >
     <SkyweaverBackground />
 
     <div
       {...SAL_PROPS}
-      className="mx-auto max-w-xl flex flex-col items-center px-2 py-11"
+      className="mx-auto max-w-xl flex flex-col items-center px-2 py-3"
     >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
       <h3 className="text-white mt-5 mb-7">Powered by Sequence</h3>

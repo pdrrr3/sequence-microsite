@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from "./Button"
 
 export const MailingListInput = ({ grayscale, small, className }) => (
   <div
@@ -14,20 +15,11 @@ export const MailingListInput = ({ grayscale, small, className }) => (
     <input
       placeholder="Get early access and updates"
       className="w-full bg-transparent outline-none text-white"
-      style={{ minWidth: 250 }}
+      style={{ minWidth: 150 }}
     />
-    <button
-      className="button block rounded-full bg-medium-gray text-medium-gray relative gradient-shift"
-      style={
-        grayscale
-          ? { background: "#404040" }
-          : {
-              backgroundImage:
-                "linear-gradient(0deg, rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), linear-gradient(222.39deg, rgba(174, 38, 145, 0) 68.93%, #AB4294 115.85%), linear-gradient(61.57deg, rgba(30, 118, 154, 0) 19.77%, #56C6CD 85.93%), linear-gradient(0deg, #342ABC, #342ABC)",
-            }
-      }
-    >
+
+    <Button Component="button" className="block" style={{ minWidth: 120 }}>
       Join
-    </button>
+    </Button>
   </div>
 )

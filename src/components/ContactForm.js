@@ -14,6 +14,7 @@ export const ContactForm = () => (
       </div>
 
       <form
+        className="flex justify-center items-center flex-col"
         onSubmit={e => {
           e.preventDefault()
           if (e && e.target) {
@@ -38,7 +39,7 @@ export const ContactForm = () => (
         </Button>
       </form>
 
-      <p className="footnote max-w-md mx-auto mt-10">
+      <p className="footnote max-w-md mx-auto mt-7">
         We typically respond to inquiries within 48 hours
         <br />
         You can also email us directly at{" "}

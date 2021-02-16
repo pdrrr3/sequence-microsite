@@ -5,32 +5,39 @@ import {
   HERO_IMAGES,
   HERO_IMAGE_SWAP_DURATION,
 } from "../constants"
-import { MailingListInput } from "./MailingList"
 import ethLogo from "../assets/hero/eth-logo.png"
 import linkImg from "../assets/link.png"
 import { CrossfadeImage } from "./CrossfadeImage"
-// import shuffle from "lodash/shuffle"
-// const positions = shuffle(HERO_IMAGE_POSITIONS)
+import { Button } from "./Button"
+import logoPng from "../assets/sequence-logo.png"
+
 const positions = HERO_IMAGE_POSITIONS
 
 export const Hero = () => (
   <>
-    <div className="container px-4 py-10 mx-auto mt-7 mb-10">
+    <div className="container px-4 pt-7 sm:pt-10 pb-10 mx-auto sm:mt-9 mb-10">
       <div
         {...SAL_PROPS}
-        className="mx-auto flex flex-col justify-center text-center"
+        className="mx-auto flex flex-col justify-center text-center items-center"
         style={{ maxWidth: 700 }}
       >
+        <div className="sm:hidden mb-8">
+          <img alt="logo" src={logoPng} style={{ height: 40 }} />
+        </div>
+
         <h1 className="mt-2 mb-4">
           A seamless user and developer experience for Ethereum
         </h1>
 
-        <p className="large mx-auto max-w-4xl text-light-gray">
+        <p
+          className="large mx-auto max-w-4xl text-light-gray mb-6"
+          style={{ fontSize: 20 }}
+        >
           Sequence lets you integrate blockchain with your product in two
           minutes
         </p>
 
-        <MailingListInput small className="w-full max-w-md mx-auto mt-6" />
+        <Button>Get Started</Button>
       </div>
     </div>
 
@@ -56,18 +63,6 @@ export const Hero = () => (
                 dimension.
               </p>
             </div>
-
-            <div className="flex items-center mt-5">
-              <img
-                className="mr-4"
-                alt="etherium"
-                src={ethLogo}
-                style={{ height: 28 }}
-              />
-              <p className="text-white text-bold">
-                Compatible with everything on Ethereum
-              </p>
-            </div>
           </div>
 
           <div className="flex-1 relative hero-logo-container">
@@ -81,6 +76,18 @@ export const Hero = () => (
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="flex items-center justify-center mt-10 lg:justify-start lg:ml-10 lg:mt-5">
+        <img
+          className="mr-4"
+          alt="etherium"
+          src={ethLogo}
+          style={{ height: 28 }}
+        />
+        <p className="text-white text-bold">
+          Compatible with everything on Ethereum
+        </p>
       </div>
     </div>
   </>

@@ -20,7 +20,7 @@ export default function Home({ location }) {
     sal()
   }, [])
 
-  if (code !== "iZJDEdNzcQ84MNkmVV") return null
+  // if (code !== "iZJDEdNzcQ84MNkmVV") return null
 
   return (
     <div style={{ overflowX: "hidden" }}>
