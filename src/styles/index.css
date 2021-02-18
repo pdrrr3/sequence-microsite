@@ -47,13 +47,22 @@ footer a {
 }
 
 #designed-for {
-  height: 580px;
+  height: 500px;
+  max-width: 550px;
+  padding: 0 32px;
+}
+#designed-for .heading-wrap {
+  max-width: 300px;
+}
+#designed-for .heading-wrap h2 {
+  font-size: 24px;
 }
 
 #designed-for h2.gradient2 {
+  font-size: 32px;
+  margin: 10px 0;
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
   background: linear-gradient(
     85.44deg,
     #ad64b9 0%,
@@ -67,20 +76,19 @@ footer a {
   margin: 18px 0;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 769px) {
   #designed-for {
-    height: 400px;
-    max-width: 550px;
+    padding: 0;
   }
   #designed-for .heading-wrap {
     max-width: 130px;
   }
-  #designed-for .heading-wrap h2 {
-    font-size: 24px;
+}
+@media (min-width: 1000px) {
+  #designed-for {
+    height: 580px;
   }
-
   #designed-for h2.gradient2 {
-    font-size: 30px;
-    margin: 10px 0;
+    font-size: 50px;
   }
 }

@@ -16,10 +16,10 @@ export const DesignedFor = ({ className }) => {
     <div
       id="designed-for"
       {...SAL_PROPS}
-      className={`flex text-center mx-auto ${className}`}
+      className={`flex flex-col md:flex-row text-center mx-auto ${className}`}
     >
       <div
-        className={`heading-wrap flex sm:flex-1 items-center text-right mr-6`}
+        className={`heading-wrap flex md:flex-1 items-center text-right mr-6`}
       >
         <h2>Designed for</h2>
       </div>

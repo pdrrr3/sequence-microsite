@@ -152,7 +152,9 @@ input {
 .text-white {
   -webkit-text-fill-color: initial;
 }
-
+#compatibility-note {
+  font-size: 16px;
+}
 @media (min-width: 640px) {
   h1 {
     font-size: 45px;
@@ -180,5 +182,8 @@ input {
 
   p.large {
     font-size: 20px;
+  }
+  #compatibility-note {
+    font-size: 18px;
   }
 }

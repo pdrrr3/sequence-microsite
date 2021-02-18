@@ -41,7 +41,7 @@ export const Blockchain = ({ className }) => (
         src={ethLogo}
         style={{ height: 28 }}
       />
-      <p className="text-white text-bold" style={{ fontSize: 18 }}>
+      <p id="compatibility-note" className="text-white text-bold">
         Compatible with everything on Ethereum
       </p>
     </div>

@@ -19,6 +19,7 @@ export const Shader = () => {
         premultipliedAlpha: false,
       }}
       width="100vw"
+      height="100vh"
     >
       <Node
         shader={shaders.background}

@@ -49,7 +49,12 @@ export const Footer = ({ className }) => (
           Copyright © {new Date().getFullYear()} Sequence
         </p>
 
-        <a className="flex items-center" href={URIS.horizon} target="_blank">
+        <a
+          className="flex items-center"
+          href={URIS.horizon}
+          target="_blank"
+          rel="noreferrer"
+        >
           <p className="my-2 mr-4 hidden note lg:block">Built by</p>
           <img alt="logo" src={footerPng} style={{ height: 26 }} />
         </a>

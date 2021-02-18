@@ -6,7 +6,6 @@ import { SAL_PROPS } from "../../constants"
 export const SkyweaverCallout = ({ className }) => (
   <div className={`relative md:text-center ${className}`} style={{ zIndex: 5 }}>
     <SkyweaverBackground />
-
     <div
       {...SAL_PROPS}
       onClick={() => window.open("https://skyweaver.net/", "_blank")}
