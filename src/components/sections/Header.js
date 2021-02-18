@@ -32,9 +32,18 @@ export const Header = ({ className }) => {
         <button onClick={() => setOpen(true)}>
           <img alt="menu-open" src={openMenuPng} style={{ height: 55 }} />
         </button>
-
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "black",
+            zIndex: 98,
+            pointerEvents: "none",
+            opacity: open ? 0.5 : 0,
+          }}
+        />
         <nav
-          className="py-5 pl-7 pr-5"
+          className="py-5 pl-5 pr-5"
           style={{
             transition: "opacity 500ms",
             opacity: open ? 1 : 0,
@@ -98,7 +107,13 @@ export const Header = ({ className }) => {
 }
 
 const HeaderLink = ({ children, href = "/#" }) => (
-  <a href={href} target="_blank" rel="noreferrer" className="px-4">
+  <a
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    className="px-4"
+    style={{ fontSize: 20 }}
+  >
     {children}
   </a>
 )

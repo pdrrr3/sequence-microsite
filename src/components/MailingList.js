@@ -6,7 +6,7 @@ export const MailingListInput = ({
   grayscale,
   small,
   className,
-  placeholder = "Sign up for our newsletter",
+  placeholder = "Your email",
 }) => (
   <div
     className={`self-stretch rounded-full flex overflow-hidden ${className}`}
@@ -38,7 +38,7 @@ export const MailingListInput = ({
 export const MailingListSection = ({ className }) => (
   <div
     {...SAL_PROPS}
-    className={`flex flex-col lg:flex-row lg:items-center justify-between rounded px-8 lg:px-10 ${className}`}
+    className={`flex flex-col lg:flex-row lg:items-center justify-between rounded px-4 lg:px-10 ${className}`}
     style={{
       background:
         "linear-gradient(83.57deg, #19141Caa 0%, #121A19aa 100%), #111111",

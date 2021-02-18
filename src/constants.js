@@ -69,6 +69,7 @@ export const URIS = {
   contact: "/#contact",
   docs: "/#docs",
   github: "/#github",
+  discord: "/#discord",
   twitter: "/#twitter",
   terms: "/#terms",
   cookies: "/#cookies",

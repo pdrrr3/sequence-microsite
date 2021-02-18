@@ -9,7 +9,8 @@ export const SkyweaverCallout = ({ className }) => (
 
     <div
       {...SAL_PROPS}
-      className="mx-auto max-w-xl flex flex-col items-center px-2 py-3 text-white"
+      onClick={() => window.open("https://skyweaver.net/", "_blank")}
+      className="pointer mx-auto max-w-xl flex flex-col items-center px-2 py-3 text-white"
     >
       <img alt="skyweaver" src={skyweaverPng} width={300} />
       <h3 className="text-white mt-5 mb-7">Powered by Sequence</h3>
@@ -21,7 +22,7 @@ export const SkyweaverCallout = ({ className }) => (
         easily store, buy, sell and trade items with one another.
         <br />
         <br />
-        SkyWeaver is pioneering community-owned economies in gaming, and it’s
+        Skyweaver is pioneering community-owned economies in gaming, and it’s
         powered by Sequence.
       </p>
     </div>

@@ -26,13 +26,13 @@ export const Footer = ({ className }) => (
 
         <div className="flex flex-col lg:flex-row flex-1 text-center max-w-3xl order-1 my-4 lg:my-0 lg:ml-8">
           <div className="flex flex-col flex-1 items-end">
-            <FooterLink href={URIS.tools}>Tools</FooterLink>
             <FooterLink href={URIS.contact}>Contact</FooterLink>
             <FooterLink href={URIS.docs}>Docs</FooterLink>
           </div>
 
           <div className="flex flex-col flex-1 items-end order-4 lg:order-2">
             <FooterLink href={URIS.github}>Github</FooterLink>
+            <FooterLink href={URIS.discord}>Discord</FooterLink>
             <FooterLink href={URIS.twitter}>Twitter</FooterLink>
           </div>
 
@@ -49,10 +49,13 @@ export const Footer = ({ className }) => (
           Copyright © {new Date().getFullYear()} Sequence
         </p>
 
-        <a className="flex items-center" href={URIS.horizon}>
+        <button
+          className="flex items-center"
+          onClick={() => window.open(URIS.horizon, "_blank")}
+        >
           <p className="my-2 mr-4 hidden note lg:block">Built by</p>
           <img alt="logo" src={footerPng} style={{ height: 26 }} />
-        </a>
+        </button>
       </div>
     </div>
   </footer>

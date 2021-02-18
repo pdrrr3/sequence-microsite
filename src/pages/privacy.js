@@ -16,8 +16,8 @@ export default function Privacy() {
           <h1 className="mb-5">Privacy</h1>
 
           <p className="mt-2 mb-7">
-            These terms govern your use of the SkyWeaver video game and the
-            Arcadeum platform that powers SkyWeaver, including related
+            These terms govern your use of the Skyweaver video game and the
+            Arcadeum platform that powers Skyweaver, including related
             trademarks, software code, and other intellectual property (all
             collectively referred to in these terms as the “Arcadeum Gaming
             Platform”). By using the Arcadeum Gaming Platform, you indicate your

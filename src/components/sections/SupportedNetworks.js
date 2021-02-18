@@ -15,15 +15,24 @@ export const SupportedNetworks = ({ className }) => (
       {...SAL_PROPS}
       style={{ maxWidth: 1100 }}
     >
-      {[evm1Png, evm2Png, evm3Png, evm4Png].map((img, index) => (
-        <div
-          key={index}
+      {NETWORKS.map((network, index) => (
+        <a
+          key={network.label}
+          href={network.uri}
+          target="_blank"
           className="flex items-center mx-2 my-6 lg:my-2"
           style={{ width: 200 }}
         >
-          <img className="object-fit" alt="etherium" src={img} />
-        </div>
+          <img className="object-fit" alt={network.label} src={network.image} />
+        </a>
       ))}
     </div>
   </div>
 )
+
+const NETWORKS = [
+  { image: evm1Png, label: "Ethereum", uri: "https://ethereum.org/en/" },
+  { image: evm2Png, label: "Matic", uri: "https://polygon.technology/" },
+  { image: evm3Png, label: "Arbitrum", uri: "https://offchainlabs.com/" },
+  { image: evm4Png, label: "Optimism", uri: "https://optimism.io/" },
+]

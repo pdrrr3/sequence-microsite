@@ -24,7 +24,7 @@ export const DesignedFor = ({ className }) => {
         <h2>Designed for</h2>
       </div>
       <div
-        style={{ textAlign: "left", height: 580 }}
+        style={{ textAlign: "left" }}
         className={`relative flex-1 justify-center items-center`}
       >
         {items.map((item, index) => {
@@ -32,15 +32,15 @@ export const DesignedFor = ({ className }) => {
           return (
             <h2
               key={item}
+              className="gradient2"
               style={{
                 opacity: 1 - Math.abs(relativePos) / 3,
                 position: "absolute",
                 top: "42%",
                 whiteSpace: "nowrap",
                 transition: "opacity 300ms, transform 300ms",
-                transform: `translate(0, ${relativePos * 80}px)`,
+                transform: `translate(0, ${relativePos * 75}px)`,
               }}
-              className="gradient2"
             >
               {item}
             </h2>
