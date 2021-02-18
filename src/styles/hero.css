@@ -98,15 +98,33 @@
     left: -3vw;
   }
   .hero-logo-1 {
-    left: 45vw;
+    left: 40vw;
   }
   .hero-logo-2 {
     left: 0vw;
   }
   .hero-logo-3 {
-    left: 60vw;
+    left: 50vw;
   }
   .hero-logo-4 {
     left: 30vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-logo-0 {
+    left: -20px;
+  }
+  .hero-logo-1 {
+    left: 180px;
+  }
+  .hero-logo-2 {
+    left: 0;
+  }
+  .hero-logo-3 {
+    left: 250px;
+  }
+  .hero-logo-4 {
+    left: 200px;
   }
 }

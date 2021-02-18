@@ -20,6 +20,7 @@ export const SupportedNetworks = ({ className }) => (
           key={network.label}
           href={network.uri}
           target="_blank"
+          rel="noreferrer"
           className="flex items-center mx-2 my-6 lg:my-2"
           style={{ width: 200 }}
         >

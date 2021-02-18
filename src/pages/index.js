@@ -41,7 +41,7 @@ export default function Home({ location }) {
     <div style={{ overflowX: "hidden" }}>
       <Head />
 
-      <Shimmer offset="-30%" />
+      <Shimmer offset="0%" />
 
       <Header className="max-w-6xl mt-5 px-5 sm:mt-7" />
 

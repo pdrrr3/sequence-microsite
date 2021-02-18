@@ -49,13 +49,10 @@ export const Footer = ({ className }) => (
           Copyright © {new Date().getFullYear()} Sequence
         </p>
 
-        <button
-          className="flex items-center"
-          onClick={() => window.open(URIS.horizon, "_blank")}
-        >
+        <a className="flex items-center" href={URIS.horizon} target="_blank">
           <p className="my-2 mr-4 hidden note lg:block">Built by</p>
           <img alt="logo" src={footerPng} style={{ height: 26 }} />
-        </button>
+        </a>
       </div>
     </div>
   </footer>
