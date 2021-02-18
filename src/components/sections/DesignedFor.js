@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from "react"
 import { SAL_PROPS } from "../../constants"
-
 export const DesignedFor = ({ className }) => {
   const [items, setItems] = useState([...ITEMS])
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setItems(i => [...i.slice(1), i[0]])
+      setItems(items => [...items.slice(1), items[0]])
     }, 2000)
 
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+    const listener = window.addEventListener("resize", () =>
+      setWidth(window.innerWidth)
+    )
+    return () => window.removeEventListener("resize", listener)
+  }, [])
+
+  const mobile = width <= 767
 
   return (
     <div
@@ -34,12 +44,18 @@ export const DesignedFor = ({ className }) => {
               key={item}
               className="gradient2"
               style={{
-                opacity: 1 - Math.abs(relativePos) / 3,
+                opacity: mobile
+                  ? index === items.length - 1
+                    ? 0
+                    : index * 0.17
+                  : 1 - Math.abs(relativePos) / 3,
                 position: "absolute",
-                top: "42%",
+                top: mobile ? "85%" : "42%",
                 whiteSpace: "nowrap",
                 transition: "opacity 300ms, transform 300ms",
-                transform: `translate(0, ${relativePos * 75}px)`,
+                transform: `translate(0, ${
+                  mobile ? index * -75 : relativePos * -75
+                }px)`,
               }}
             >
               {item}
@@ -55,7 +71,7 @@ const ITEMS = [
   "Payments",
   "Exchanges",
   "Marketplaces",
-  "Payments ",
+  "Social",
   "Gaming",
   "DeFi",
   "NFTs + Collectibles",
