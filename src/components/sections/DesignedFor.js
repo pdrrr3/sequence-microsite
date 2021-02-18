@@ -54,7 +54,7 @@ export const DesignedFor = ({ className }) => {
                 whiteSpace: "nowrap",
                 transition: "opacity 300ms, transform 300ms",
                 transform: `translate(0, ${
-                  mobile ? index * -75 : relativePos * -75
+                  mobile ? index * -75 : relativePos * -85
                 }px)`,
               }}
             >
