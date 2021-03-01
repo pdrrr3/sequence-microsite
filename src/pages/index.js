@@ -61,7 +61,7 @@ export default function Home({ location }) {
 
       <DesignedFor className="max-w-4xl mt-10 mb-10 sm:px-4" />
 
-      <Features className="max-w-8xl mb-10 pb-10 md:px-2" />
+      <Features className="max-w-8xl mb-5 md:mb-10 md:pb-10 md:px-2" />
 
       <SupportedNetworks className="my-10 pt-10 mb-10" />
 

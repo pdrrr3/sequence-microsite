@@ -4,7 +4,7 @@ import skyweaverBGPng from "../../assets/skyweaverbg.png"
 import { SAL_PROPS } from "../../constants"
 
 export const SkyweaverCallout = ({ className }) => (
-  <div className={`relative md:text-center ${className}`} style={{ zIndex: 5 }}>
+  <div className={`relative text-center ${className}`} style={{ zIndex: 5 }}>
     <SkyweaverBackground />
     <div
       {...SAL_PROPS}

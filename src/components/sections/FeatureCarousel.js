@@ -16,7 +16,7 @@ export const FeatureCarousel = ({ className, clickCopyCode, showCode }) => (
       className="flex flex-col justify-center pt-7"
       style={{ maxWidth: 500 }}
     >
-      <h2>An Ethereum Web Wallet anyone can use</h2>
+      <h2 style={{ opacity: 0.8 }}>An Ethereum Web Wallet anyone can use</h2>
 
       <div className="my-3" />
 

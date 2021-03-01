@@ -17,7 +17,7 @@ const HERO_BRANDS = {
     href: "https://skyweaver.net/",
     src: SkyweaverPng,
   },
-  ETH: { label: "ETH", href: "https://ethereum.org/en/", src: ETHPng },
+  ETH: { label: "Ethereum", href: "https://ethereum.org/en/", src: ETHPng },
   Decentraland: {
     label: "Decentraland",
     href: "https://decentraland.org/",
