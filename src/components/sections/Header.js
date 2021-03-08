@@ -23,7 +23,11 @@ export const Header = ({ className }) => {
         <HeaderLink href={URIS.github}>Github</HeaderLink>
         <HeaderLink href={URIS.community}>Discord</HeaderLink>
         <HeaderLink href={URIS.contact}>Contact</HeaderLink>
-        <Button variant="outlined" className="ml-5">
+        <Button
+          variant="outlined"
+          className="ml-5"
+          style={{ background: "black" }}
+        >
           Launch Wallet
         </Button>
       </div>
@@ -56,11 +60,7 @@ export const Header = ({ className }) => {
           }}
         >
           <div className="flex items-start justify-between">
-            <img
-              alt="logo"
-              src={iconPng}
-              style={{ height: 64, marginTop: 12 }}
-            />
+            <img alt="logo" src={iconPng} style={{ height: 55 }} />
 
             <button onClick={onClose}>
               <img alt="menu-close" src={closeMenuPng} style={{ height: 55 }} />

@@ -6,7 +6,7 @@ import featuresMobilePng from "../../assets/features-mobile.png"
 export const Features = ({ className }) => (
   <div
     {...SAL_PROPS}
-    className={`flex flex-col items-center mx-auto lg:flex-row ${className}`}
+    className={`flex flex-col items-center lg:flex-row ${className}`}
   >
     <div className="flex-1 flex flex-col items-center justify-center text-center">
       <div className="max-w-2xl">

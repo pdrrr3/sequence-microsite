@@ -5,7 +5,7 @@ import ethLogo from "../../assets/hero/eth-logo.png"
 
 export const Blockchain = ({ className }) => (
   <div className={`container relative ${className}`}>
-    <div className="hero-blue-container flex flex-col bg-blue rounded shadow px-6 py-10 mx-auto lg:flex-row lg:px-9">
+    <div className="hero-blue-container flex flex-col bg-blue rounded shadow px-6 pt-5 pb-10 mx-auto lg:flex-row lg:px-9">
       <div className="flex-1 box-border flex flex-col justify-between text-center sm:text-left lg:pr-9">
         <div>
           <h2 className="text-white mb-5">

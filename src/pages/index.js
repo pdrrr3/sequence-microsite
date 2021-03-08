@@ -45,33 +45,33 @@ export default function Home({ location }) {
 
       <Header className="max-w-6xl mt-5 px-5 sm:mt-7" />
 
-      <Hero className="max-w-6xl px-4 pt-7 pb-5 mb-10 sm:pb-10 sm:mt-9 sm:pt-10" />
+      <Hero className="max-w-6xl px-5 pt-7 pb-5 mb-10 sm:pb-10 sm:mt-9 sm:pt-10 md:mx-auto" />
 
-      <Blockchain className="max-w-8xl px-4 pb-7" />
+      <Blockchain className="max-w-8xl px-5 pb-7 md:mx-auto" />
 
-      <IntegrationLayers className="max-w-6xl pt-6 pb-10 sm:pb-5 lg:px-5" />
+      <IntegrationLayers className="max-w-6xl pt-6 pb-10 mx-5 sm:pb-5 lg:px-5 md:mx-auto" />
 
-      <MailingListSection className="max-w-7xl mx-6 mt-5 py-10 mb-10 md:mt-0 xl:mx-auto" />
+      <MailingListSection className="max-w-7xl mt-5 py-10 mb-10 mx-5 md:mx-6 md:mt-0 xl:mx-auto" />
 
       <FeatureCarousel
-        className="max-w-6xl pt-9 mb-10"
+        className="max-w-6xl px-5 pt-9 mb-10 md:mx-auto"
         showCode={showCode}
         clickCopyCode={clickCopyCode}
       />
 
-      <DesignedFor className="max-w-4xl mt-10 mb-10 sm:px-4" />
+      <DesignedFor className="max-w-4xl mt-10 mb-10 px-5 md:mx-auto" />
 
-      <Features className="max-w-8xl mb-5 md:mb-10 md:pb-10 md:px-2" />
+      <Features className="max-w-8xl mb-5 mx-5 md:mb-10 md:pb-10 md:px-2 md:mx-auto" />
 
-      <SupportedNetworks className="my-10 pt-10 mb-10" />
+      <SupportedNetworks className="my-10 px-5 pt-10 mb-10 md:mx-auto" />
 
-      <CallToAction className="max-w-2xl my-10 pt-10 mb-10" />
+      <CallToAction className="max-w-2xl my-10 pt-10 mb-10 md:mx-auto" />
 
       <Shimmer offset="-60%" />
 
-      <SkyweaverCallout className="max-w-6xl mx-4 lg:mx-auto px-4 py-10 mx-2 mb-10" />
+      <SkyweaverCallout className="max-w-6xl mx-5 md:mx-auto px-5 py-10 mx-2 mb-10" />
 
-      <ContactForm className="px-2 pt-8 pb-10 mb-10 md:px-4" />
+      <ContactForm className="pt-8 pb-10 mb-10 px-5 md:mx-auto" />
 
       <Shimmer height="60vw" offset="-75%" />
 

@@ -6,8 +6,8 @@ import evm3Png from "../../assets/evm/evm-3.png"
 import evm4Png from "../../assets/evm/evm-4.png"
 
 export const SupportedNetworks = ({ className }) => (
-  <div className={`flex flex-col text-center mx-auto ${className}`}>
-    <h2 {...SAL_PROPS} className="px-4 mb-6">
+  <div className={`flex flex-col text-center  ${className}`}>
+    <h2 {...SAL_PROPS} className="mb-6">
       Support for all EVM compatible networks
     </h2>
     <div

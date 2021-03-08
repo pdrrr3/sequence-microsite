@@ -26,7 +26,7 @@ export const DesignedFor = ({ className }) => {
     <div
       id="designed-for"
       {...SAL_PROPS}
-      className={`flex flex-col md:flex-row text-center mx-auto ${className}`}
+      className={`flex flex-col md:flex-row text-center ${className}`}
     >
       <div
         className={`heading-wrap flex md:flex-1 items-center text-right mr-6`}

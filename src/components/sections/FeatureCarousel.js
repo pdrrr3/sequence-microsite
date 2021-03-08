@@ -5,7 +5,7 @@ import copyCode from "../../assets/copy-code.png"
 
 export const FeatureCarousel = ({ className, clickCopyCode, showCode }) => (
   <div
-    className={`flex flex-col items-center justify-between px-4 mx-auto lg:flex-row ${className}`}
+    className={`flex flex-col items-center justify-between lg:flex-row ${className}`}
   >
     <div {...SAL_PROPS} className="w-full max-w-md lg:max-w-md">
       <Carousel />
@@ -13,7 +13,7 @@ export const FeatureCarousel = ({ className, clickCopyCode, showCode }) => (
 
     <div
       {...SAL_PROPS}
-      className="flex flex-col justify-center pt-7"
+      className="flex flex-col justify-center pt-7 w-full"
       style={{ maxWidth: 500 }}
     >
       <h2 style={{ opacity: 0.8 }}>An Ethereum Web Wallet anyone can use</h2>

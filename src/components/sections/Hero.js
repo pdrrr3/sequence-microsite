@@ -4,14 +4,14 @@ import { SAL_PROPS } from "../../constants"
 import logoPng from "../../assets/sequence-logo.png"
 
 export const Hero = ({ className }) => (
-  <div className={`container mx-auto ${className}`}>
+  <div className={`container ${className}`}>
     <div
       {...SAL_PROPS}
       className="mx-auto flex flex-col justify-center text-center items-center"
       style={{ maxWidth: 700 }}
     >
       <div className="sm:hidden mb-8">
-        <img alt="logo" src={logoPng} style={{ height: 40 }} />
+        <img alt="logo" src={logoPng} style={{ height: 30 }} />
       </div>
 
       <h1 className="mt-2 mb-5 max-w-md sm:max-w-4xl">
@@ -20,7 +20,7 @@ export const Hero = ({ className }) => (
 
       <p
         className="large mx-auto text-light-gray mb-6 max-w-sm sm:max-w-4xl"
-        style={{ fontSize: 20 }}
+        style={{ fontSize: 18 }}
       >
         Sequence lets you integrate blockchain with your product in two minutes
       </p>

@@ -5,10 +5,10 @@ import { SAL_PROPS } from "../../constants"
 export const IntegrationLayers = ({ className }) => (
   <div
     {...SAL_PROPS}
-    className={`flex flex-col-reverse items-center mx-auto lg:flex-row ${className}`}
+    className={`flex flex-col-reverse items-center lg:flex-row ${className}`}
   >
     <div
-      className="flex-1 w-full flex flex-col justify-center px-7 sm:px-0 lg:mr-10"
+      className="flex-1 w-full flex flex-col justify-center md:px-7 lg:mr-10"
       style={{ maxWidth: 550 }}
     >
       <h2 style={{ maxWidth: 550 }}>
