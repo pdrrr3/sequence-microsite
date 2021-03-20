@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Inter;
+  font-family: Circular Std;
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
@@ -157,27 +157,27 @@ input {
 }
 @media (min-width: 640px) {
   h1 {
-    font-size: 45px;
+    font-size: 26px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 26px;
   }
 
   h3 {
-    font-size: 25px;
-  }
-
-  h4 {
     font-size: 21px;
   }
 
-  p {
+  h4 {
     font-size: 18px;
   }
 
-  .button {
+  p {
     font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
   }
 
   p.large {
